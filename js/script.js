@@ -1,47 +1,99 @@
 // dark mode toggle functionality ***
-document.addEventListener("DOMContentLoaded", function() {
-  const themeToggle = document.getElementById("light-dark-mode");
-  const htmlElement = document.documentElement;
-  const iconElement = themeToggle.querySelector("i");
+// document.addEventListener("DOMContentLoaded", function() {
+//   const themeToggle = document.getElementById("light-dark-mode");
+//   const htmlElement = document.documentElement;
+//   const iconElement = themeToggle.querySelector("i");
 
-  // Load the theme from sessionStorage or default to light
+//   // Load the theme from sessionStorage or default to light
+//   const currentTheme = sessionStorage.getItem("theme") || "light";
+//   htmlElement.setAttribute("data-bs-theme", currentTheme);
+//   updateIcon(currentTheme);
+
+//   themeToggle.addEventListener("click", function() {
+//     // Toggle theme
+//     const newTheme = htmlElement.getAttribute("data-bs-theme") === "light" ? "dark" : "light";
+//     htmlElement.setAttribute("data-bs-theme", newTheme);
+//     // Store the updated theme in sessionStorage
+//     sessionStorage.setItem("theme", newTheme);
+//     // Update the icon
+//     updateIcon(newTheme);
+//   });
+
+//   function updateIcon(theme) {
+//     if (theme === "dark") {
+//       iconElement.classList.remove("bi-moon");
+//       iconElement.classList.add("bi-sun");
+//     } else {
+//       iconElement.classList.remove("bi-sun");
+//       iconElement.classList.add("bi-moon");
+//     }
+//   }
+// });
+$(function () {
+  const $themeToggle = $("#light-dark-mode");
+  const $htmlElement = $(document.documentElement);
+  const $iconElement = $themeToggle.find("i");
+
   const currentTheme = sessionStorage.getItem("theme") || "light";
-  htmlElement.setAttribute("data-bs-theme", currentTheme);
+  $htmlElement.attr("data-bs-theme", currentTheme);
   updateIcon(currentTheme);
 
-  themeToggle.addEventListener("click", function() {
-    // Toggle theme
-    const newTheme = htmlElement.getAttribute("data-bs-theme") === "light" ? "dark" : "light";
-    htmlElement.setAttribute("data-bs-theme", newTheme);
-    // Store the updated theme in sessionStorage
+  $themeToggle.on("click", function () {
+    const newTheme = $htmlElement.attr("data-bs-theme") === "light" ? "dark" : "light";
+    $htmlElement.attr("data-bs-theme", newTheme);
     sessionStorage.setItem("theme", newTheme);
-    // Update the icon
     updateIcon(newTheme);
   });
 
   function updateIcon(theme) {
     if (theme === "dark") {
-      iconElement.classList.remove("bi-moon");
-      iconElement.classList.add("bi-sun");
+      $iconElement.removeClass("bi-moon").addClass("bi-sun");
     } else {
-      iconElement.classList.remove("bi-sun");
-      iconElement.classList.add("bi-moon");
+      $iconElement.removeClass("bi-sun").addClass("bi-moon");
     }
   }
 });
 
+
 // full screen toggle functionality ***
-document.addEventListener("DOMContentLoaded", () => {
-  const btn = document.getElementById("fullscreenToggle");
-  const icon = btn?.querySelector("i");
+// document.addEventListener("DOMContentLoaded", () => {
+//   const btn = document.getElementById("fullscreenToggle");
+//   const icon = btn?.querySelector("i");
 
-  const updateIcon = () => {
+//   const updateIcon = () => {
+//     const fs = document.fullscreenElement || document.webkitFullscreenElement || document.msFullscreenElement;
+//     icon?.classList.toggle("bi-fullscreen", !fs);
+//     icon?.classList.toggle("bi-fullscreen-exit", !!fs);
+//   };
+
+//   const toggleFullscreen = () => {
+//     const el = document.documentElement;
+//     const fs = document.fullscreenElement || document.webkitFullscreenElement || document.msFullscreenElement;
+
+//     if (!fs) {
+//       (el.requestFullscreen || el.webkitRequestFullscreen || el.msRequestFullscreen)?.call(el);
+//     } else {
+//       (document.exitFullscreen || document.webkitExitFullscreen || document.msExitFullscreen)?.call(document);
+//     }
+//   };
+
+//   if (btn) btn.addEventListener("click", toggleFullscreen);
+
+//   // Listen for fullscreen changes (e.g., Esc key or OS/browser triggers)
+//   ["fullscreenchange", "webkitfullscreenchange", "msfullscreenchange"]
+//     .forEach(evt => document.addEventListener(evt, updateIcon));
+// });
+$(function () {
+  const $btn = $("#fullscreenToggle");
+  const $icon = $btn.find("i");
+
+  function updateIcon() {
     const fs = document.fullscreenElement || document.webkitFullscreenElement || document.msFullscreenElement;
-    icon?.classList.toggle("bi-fullscreen", !fs);
-    icon?.classList.toggle("bi-fullscreen-exit", !!fs);
-  };
+    $icon.toggleClass("bi-fullscreen", !fs);
+    $icon.toggleClass("bi-fullscreen-exit", !!fs);
+  }
 
-  const toggleFullscreen = () => {
+  function toggleFullscreen() {
     const el = document.documentElement;
     const fs = document.fullscreenElement || document.webkitFullscreenElement || document.msFullscreenElement;
 
@@ -50,126 +102,250 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       (document.exitFullscreen || document.webkitExitFullscreen || document.msExitFullscreen)?.call(document);
     }
-  };
+  }
 
-  if (btn) btn.addEventListener("click", toggleFullscreen);
+  if ($btn.length) {
+    $btn.on("click", toggleFullscreen);
+  }
 
-  // Listen for fullscreen changes (e.g., Esc key or OS/browser triggers)
-  ["fullscreenchange", "webkitfullscreenchange", "msfullscreenchange"]
-    .forEach(evt => document.addEventListener(evt, updateIcon));
+  $(document).on("fullscreenchange webkitfullscreenchange msfullscreenchange", updateIcon);
 });
+
 
 // Search input dropdown functionality ***
-const searchInput = document.getElementById('top-search');
-const dropdown = document.getElementById('search-dropdown');
-// Show dropdown on focus
-searchInput.addEventListener('focus', () => {
-  dropdown.classList.add('show');
+// const searchInput = document.getElementById('top-search');
+// const dropdown = document.getElementById('search-dropdown');
+// // Show dropdown on focus
+// searchInput.addEventListener('focus', () => {
+//   dropdown.classList.add('show');
+// });
+
+// searchInput.addEventListener('blur', () => {
+//   setTimeout(() => {
+//     dropdown.classList.remove('show');
+//   }, 150);
+// });
+// // Optional: Hide dropdown when clicking outside the input + dropdown
+// document.addEventListener('click', function (e) {
+//   if (!searchInput.contains(e.target) && !dropdown.contains(e.target)) {
+//     dropdown.classList.remove('show');
+//   }
+// });
+$(function () {
+  const $searchInput = $("#top-search");
+  const $dropdown = $("#search-dropdown");
+
+  $searchInput.on("focus", function () {
+    $dropdown.addClass("show");
+  });
+
+  $searchInput.on("blur", function () {
+    setTimeout(function () {
+      $dropdown.removeClass("show");
+    }, 150);
+  });
+
+  $(document).on("click", function (e) {
+    if (!$(e.target).closest($searchInput).length && !$(e.target).closest($dropdown).length) {
+      $dropdown.removeClass("show");
+    }
+  });
 });
 
-searchInput.addEventListener('blur', () => {
-  setTimeout(() => {
-    dropdown.classList.remove('show');
-  }, 150);
-});
-// Optional: Hide dropdown when clicking outside the input + dropdown
-document.addEventListener('click', function (e) {
-  if (!searchInput.contains(e.target) && !dropdown.contains(e.target)) {
-    dropdown.classList.remove('show');
-  }
-});
 
-// Sidebar functionality
-document.addEventListener('DOMContentLoaded', function() {
-  const toggleBtn = document.querySelector('.button-toggle-menu');
-  const sidebar = document.querySelector('.leftside-menu');
-  const content = document.querySelector('.content-page');
-  const html = document.documentElement;
-  const closeBtn = document.querySelector('.button-close-fullsidebar');
+// Sidebar functionality ***
+// document.addEventListener('DOMContentLoaded', function() {
+//   const toggleBtn = document.querySelector('.button-toggle-menu');
+//   const sidebar = document.querySelector('.leftside-menu');
+//   const content = document.querySelector('.content-page');
+//   const html = document.documentElement;
+//   const closeBtn = document.querySelector('.button-close-fullsidebar');
 
-  // Check localStorage for saved state
+//   // Check localStorage for saved state
+//   const isCollapsed = localStorage.getItem("sidebarCollapsed") === "true";
+
+//   // Set initial state (but skip condensed mode on small screens)
+//   if (isCollapsed && window.innerWidth > 992) {
+//     collapseSidebar();
+//   }
+
+//   // Toggle sidebar on button click
+//   if (toggleBtn) {
+//     toggleBtn.addEventListener("click", function () {
+//       if (html.getAttribute('data-sidenav-size') === 'condensed') {
+//         expandSidebar();
+//       } else {
+//         if (window.innerWidth > 992) {
+//           collapseSidebar();
+//         } else {
+//           // On small screen, toggle full sidebar
+//           if (html.getAttribute('data-sidenav-size') === 'full') {
+//             html.removeAttribute('data-sidenav-size');
+//           } else {
+//             html.setAttribute('data-sidenav-size', 'full');
+//           }
+//         }
+//       }
+//     });
+//   }
+
+
+//   // Close button functionality
+//   if (closeBtn) {
+//     closeBtn.addEventListener('click', function() {
+//       // On desktop, collapse; on mobile, just hide sidebar
+//       if (window.innerWidth > 992) {
+//         collapseSidebar();
+//       } else {
+//         html.removeAttribute('data-sidenav-size');
+//       }
+//     });
+//   }
+
+//   function collapseSidebar() {
+//     if (window.innerWidth > 992) {
+//       html.setAttribute('data-sidenav-size', 'condensed');
+//       localStorage.setItem("sidebarCollapsed", "true");
+      
+//       // Handle logo visibility
+//       const logoLg = document.querySelector('.logo .logo-lg');
+//       const logoSm = document.querySelector('.logo .logo-sm');
+//       if (logoLg && logoSm) {
+//         logoLg.style.display = 'none';
+//         logoSm.style.display = 'block';
+//       }
+//     }
+//   }
+
+//   function expandSidebar() {
+//     html.removeAttribute('data-sidenav-size');
+//     localStorage.setItem("sidebarCollapsed", "false");
+    
+//     // Handle logo visibility
+//     const logoLg = document.querySelector('.logo .logo-lg');
+//     const logoSm = document.querySelector('.logo .logo-sm');
+//     if (logoLg && logoSm) {
+//       logoLg.style.display = 'block';
+//       logoSm.style.display = 'none';
+//     }
+//   }
+
+//   // Handle window resize to maintain correct state
+//   window.addEventListener("resize", function () {
+//     if (window.innerWidth <= 992) {
+//       html.setAttribute('data-sidenav-size', 'full');
+      
+//       // Show full logo on mobile
+//       const logoLg = document.querySelector('.logo .logo-lg');
+//       const logoSm = document.querySelector('.logo .logo-sm');
+//       if (logoLg && logoSm) {
+//         logoLg.style.display = 'block';
+//         logoSm.style.display = 'none';
+//       }
+//     } else {
+//       // Restore the saved state from localStorage
+//       const shouldBeCollapsed = localStorage.getItem("sidebarCollapsed") === "true";
+//       if (shouldBeCollapsed) {
+//         collapseSidebar();
+//       } else {
+//         expandSidebar();
+//       }
+//     }
+//   });
+
+//   // Close sidebar when clicking outside on mobile
+//   document.addEventListener('click', function(e) {
+//     if (
+//       window.innerWidth <= 992 &&
+//       html.getAttribute('data-sidenav-size') === 'full' &&
+//       !e.target.closest('.leftside-menu') &&
+//       !e.target.closest('.button-toggle-menu')
+//     ) {
+//       html.removeAttribute('data-sidenav-size');
+//     }
+//   });
+
+//   const sidebarOverlay = document.querySelector('.sidebar-overlay');
+
+//   if (sidebarOverlay) {
+//     sidebarOverlay.addEventListener('click', function() {
+//       html.removeAttribute('data-sidenav-size');
+//     });
+//   }
+
+// });
+$(function () {
+  const $toggleBtn = $(".button-toggle-menu");
+  const $sidebar = $(".leftside-menu");
+  const $content = $(".content-page");
+  const $html = $(document.documentElement);
+  const $closeBtn = $(".button-close-fullsidebar");
+
   const isCollapsed = localStorage.getItem("sidebarCollapsed") === "true";
 
-  // Set initial state (but skip condensed mode on small screens)
-  if (isCollapsed && window.innerWidth > 992) {
+  if (isCollapsed && $(window).width() > 992) {
     collapseSidebar();
   }
 
-  // Toggle sidebar on button click
-  if (toggleBtn) {
-    toggleBtn.addEventListener("click", function () {
-      if (html.getAttribute('data-sidenav-size') === 'condensed') {
-        expandSidebar();
-      } else {
-        if (window.innerWidth > 992) {
-          collapseSidebar();
-        } else {
-          // On small screen, toggle full sidebar
-          if (html.getAttribute('data-sidenav-size') === 'full') {
-            html.removeAttribute('data-sidenav-size');
-          } else {
-            html.setAttribute('data-sidenav-size', 'full');
-          }
-        }
-      }
-    });
-  }
-
-
-  // Close button functionality
-  if (closeBtn) {
-    closeBtn.addEventListener('click', function() {
-      // On desktop, collapse; on mobile, just hide sidebar
-      if (window.innerWidth > 992) {
+  $toggleBtn.on("click", function () {
+    const sidenavSize = $html.attr("data-sidenav-size");
+    if (sidenavSize === "condensed") {
+      expandSidebar();
+    } else {
+      if ($(window).width() > 992) {
         collapseSidebar();
       } else {
-        html.removeAttribute('data-sidenav-size');
+        if (sidenavSize === "full") {
+          $html.removeAttr("data-sidenav-size");
+        } else {
+          $html.attr("data-sidenav-size", "full");
+        }
       }
-    });
-  }
+    }
+  });
+
+  // $closeBtn.on("click", function () {
+  //   if ($(window).width() > 992) {
+  //     collapseSidebar();
+  //     console.log('width > 992');
+      
+  //   } else {
+  //     $html.removeAttr("data-sidenav-size");
+  //     console.log('removed');
+  //   }
+  // });
+
+  // new close button
+  $closeBtn.on("click", function () {
+    if ($(window).width() > 992) {
+      $html.attr("data-sidenav-size", "compact");
+      console.log('clicked')
+      
+    }
+  });
 
   function collapseSidebar() {
-    if (window.innerWidth > 992) {
-      html.setAttribute('data-sidenav-size', 'condensed');
+    if ($(window).width() > 992) {
+      $html.attr("data-sidenav-size", "condensed");
       localStorage.setItem("sidebarCollapsed", "true");
-      
-      // Handle logo visibility
-      const logoLg = document.querySelector('.logo .logo-lg');
-      const logoSm = document.querySelector('.logo .logo-sm');
-      if (logoLg && logoSm) {
-        logoLg.style.display = 'none';
-        logoSm.style.display = 'block';
-      }
+      $(".logo .logo-lg").hide();
+      $(".logo .logo-sm").show();
     }
   }
 
-  function expandSidebar() {
-    html.removeAttribute('data-sidenav-size');
-    localStorage.setItem("sidebarCollapsed", "false");
-    
-    // Handle logo visibility
-    const logoLg = document.querySelector('.logo .logo-lg');
-    const logoSm = document.querySelector('.logo .logo-sm');
-    if (logoLg && logoSm) {
-      logoLg.style.display = 'block';
-      logoSm.style.display = 'none';
-    }
-  }
+  // function expandSidebar() {
+  //   $html.removeAttr("data-sidenav-size");
+  //   localStorage.setItem("sidebarCollapsed", "false");
+  //   $(".logo .logo-lg").show();
+  //   $(".logo .logo-sm").hide();
+  // }
 
-  // Handle window resize to maintain correct state
-  window.addEventListener("resize", function () {
-    if (window.innerWidth <= 992) {
-      html.setAttribute('data-sidenav-size', 'full');
-      
-      // Show full logo on mobile
-      const logoLg = document.querySelector('.logo .logo-lg');
-      const logoSm = document.querySelector('.logo .logo-sm');
-      if (logoLg && logoSm) {
-        logoLg.style.display = 'block';
-        logoSm.style.display = 'none';
-      }
+  $(window).on("resize", function () {
+    if ($(window).width() <= 992) {
+      $html.attr("data-sidenav-size", "full");
+      $(".logo .logo-lg").show();
+      $(".logo .logo-sm").hide();
     } else {
-      // Restore the saved state from localStorage
       const shouldBeCollapsed = localStorage.getItem("sidebarCollapsed") === "true";
       if (shouldBeCollapsed) {
         collapseSidebar();
@@ -179,24 +355,18 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  // Close sidebar when clicking outside on mobile
-  document.addEventListener('click', function(e) {
-    if (
-      window.innerWidth <= 992 &&
-      html.getAttribute('data-sidenav-size') === 'full' &&
-      !e.target.closest('.leftside-menu') &&
-      !e.target.closest('.button-toggle-menu')
-    ) {
-      html.removeAttribute('data-sidenav-size');
-    }
-  });
+  // $(document).on("click", function (e) {
+  //   if (
+  //     $(window).width() <= 992 &&
+  //     $html.attr("data-sidenav-size") === "full" &&
+  //     !$(e.target).closest(".leftside-menu").length &&
+  //     !$(e.target).closest(".button-toggle-menu").length
+  //   ) {
+  //     $html.removeAttr("data-sidenav-size");
+  //   }
+  // });
 
-  const sidebarOverlay = document.querySelector('.sidebar-overlay');
-
-  if (sidebarOverlay) {
-    sidebarOverlay.addEventListener('click', function() {
-      html.removeAttribute('data-sidenav-size');
-    });
-  }
-
+  // $(".sidebar-overlay").on("click", function () {
+  //   $html.removeAttr("data-sidenav-size");
+  // });
 });
