@@ -11,287 +11,6 @@
   <link rel="stylesheet" href="../../assets/vendor/bootstrap/icon/bootstrap-icons.min.css">
   <!-- Custom CSS -->
   <link rel="stylesheet" href="../../assets/css/style.css">
-  <!-- <style>
-    /* .card {
-            border-radius: 12px;
-            border: none;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-            height: 100%;
-            padding: 20px;
-            position: relative;
-        } */
-
-    .metric-title {
-      color: #333;
-      font-weight: 600;
-      margin-bottom: 8px;
-      font-size: 16px;
-    }
-
-    .metric-value {
-      color: #111;
-      font-size: 36px;
-      font-weight: 700;
-      margin-bottom: 25px;
-    }
-
-    .submetric {
-      display: flex;
-      justify-content: space-between;
-      border-top: 1px solid #eaeaea;
-      padding-top: 15px;
-    }
-
-    .submetric-label {
-      color: #777;
-      font-size: 14px;
-    }
-
-    .submetric-value {
-      color: #333;
-      font-weight: 600;
-      font-size: 15px;
-    }
-
-    .chart {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 80px;
-      overflow: hidden;
-    }
-
-    .status-indicator {
-      display: inline-flex;
-      align-items: center;
-      font-size: 14px;
-      font-weight: 500;
-      margin-top: 5px;
-    }
-
-    .status-increase {
-      color: #22c55e;
-    }
-
-    .status-decrease {
-      color: #ef4444;
-    }
-
-    .status-indicator-arrow {
-      margin-right: 4px;
-    }
-
-    /* Chart backgrounds */
-    .chart-blue {
-      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%236366f1' fill-opacity='0.15' d='M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,224C1248,203,1344,181,1392,170.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
-      background-size: cover;
-    }
-
-    .chart-teal {
-      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%2306b6d4' fill-opacity='0.15' d='M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,224C1248,203,1344,181,1392,170.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
-      background-size: cover;
-    }
-
-    .progress {
-      height: 6px;
-      margin-bottom: 8px;
-      border-radius: 4px;
-    }
-
-    .progress-orange {
-      background-color: #fef2f2;
-    }
-
-    .progress-orange .progress-bar {
-      background-color: #fb923c;
-    }
-
-    .progress-purple {
-      background-color: #faf5ff;
-    }
-
-    .progress-purple .progress-bar {
-      background-color: #a855f7;
-    }
-
-    .progress-red {
-      background-color: #fef2f2;
-    }
-
-    .progress-red .progress-bar {
-      background-color: #ef4444;
-    }
-
-    .progress-green {
-      background-color: #f0fdf4;
-    }
-
-    .progress-green .progress-bar {
-      background-color: #22c55e;
-    }
-
-
-    .card-header {
-      background-color: white;
-      border-bottom: none;
-      font-weight: 600;
-      font-size: 1.15rem;
-      padding: 1.25rem;
-    }
-
-    .app-item,
-    .feedback-item,
-    .country-item {
-      border-bottom: 1px solid #f0f0f0;
-      padding: 15px 20px;
-    }
-
-    .app-item:last-child,
-    .feedback-item:last-child,
-    .country-item:last-child {
-      border-bottom: none;
-    }
-
-    .app-icon {
-      width: 48px;
-      height: 48px;
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 24px;
-    }
-
-    .app-icon.dash-bg {
-      background-color: #7367f0;
-    }
-
-    .app-icon.google-bg {
-      background-color: #00cfe8;
-    }
-
-    .app-icon.evernote-bg {
-      background-color: #00b74a;
-    }
-
-    .app-icon.shazam-bg {
-      background-color: #00b8d9;
-    }
-
-    .app-icon.picasa-bg {
-      background-color: #ff5b5c;
-    }
-
-    .badge-platform {
-      background-color: #f0f0f0;
-      color: #6e6b7b;
-      font-weight: normal;
-      padding: 5px 8px;
-      font-size: 0.75rem;
-      border-radius: 4px;
-    }
-
-    .badge-free {
-      background-color: #7367f0;
-      color: white;
-      font-weight: normal;
-      padding: 5px 8px;
-      font-size: 0.75rem;
-      border-radius: 4px;
-    }
-
-    .badge-paid {
-      background-color: #5e50ee;
-      color: white;
-      font-weight: normal;
-      padding: 5px 8px;
-      font-size: 0.75rem;
-      border-radius: 4px;
-    }
-
-    .star-rating {
-      color: #ff9f43;
-      font-size: 0.875rem;
-    }
-
-    .star-inactive {
-      color: #e0e0e0;
-    }
-
-    .reviews-text {
-      color: #6e6b7b;
-      font-size: 0.875rem;
-    }
-
-    .avatar {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background-color: #f0f0f0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #6e6b7b;
-      font-weight: bold;
-      overflow: hidden;
-    }
-
-    .feedback-name {
-      font-weight: 600;
-      font-size: 0.9rem;
-    }
-
-    .feedback-text {
-      color: #7c89b9;
-      font-size: 0.85rem;
-    }
-
-    .feedback-date {
-      color: #6e6b7b;
-      font-size: 0.8rem;
-      white-space: nowrap;
-    }
-
-    .flag-icon {
-      width: 24px;
-      height: 18px;
-      margin-right: 10px;
-      border-radius: 2px;
-    }
-
-    .country-name {
-      font-weight: 600;
-      font-size: 0.9rem;
-    }
-
-    .stat-icon {
-      color: #7367f0;
-      margin-right: 5px;
-    }
-
-    .stat-icon.mac {
-      color: #00cfe8;
-    }
-
-    .stat-icon.windows {
-      color: #ff5b5c;
-    }
-
-    .stat-text {
-      font-size: 0.85rem;
-      color: #6e6b7b;
-      margin-right: 10px;
-    }
-
-    @media (max-width: 992px) {
-      .feedback-date {
-        text-align: left !important;
-        margin-top: 5px;
-      }
-    }
-  </style> -->
 </head>
 
 <body class="position-relative">
@@ -373,7 +92,7 @@
           </a>
 
           <!-- Dropdown -->
-          <div class="dropdown-menu dropdown-menu-end p-3 drop-width">
+          <div class="dropdown-menu dropdown-menu-end p-3 dropdown-list">
             <h6 class="dropdown-header d-flex justify-content-between align-items-center">
               Notifications
               <span class="badge bg-light text-primary">4 Unread</span>
@@ -446,7 +165,7 @@
             <span class="icon-badge">6</span>
           </a>
           <!-- Dropdown -->
-          <div class="dropdown-menu dropdown-menu-end p-3 drop-width">
+          <div class="dropdown-menu dropdown-menu-end p-3 dropdown-list">
             <!-- Header -->
             <h6 class="dropdown-header">You have 4 Messages</h6>
             <!-- Message List -->
@@ -616,6 +335,9 @@
           <li class="nav-item list-unstyled">
             <a class="nav-link" href="analytics.html">Analytics</a>
           </li>
+          <li class="nav-item list-unstyled">
+            <a class="nav-link" href="lms.html">LMS</a>
+          </li>
         </ul>
       </li>
 
@@ -734,16 +456,16 @@
             </div>
           </div>
           <!-- Total Active Users chart -->
-          <div id="total-active-users" ></div>
+          <div id="total-active-users"></div>
         </div>
       </div>
 
       <!-- Total Uninstalled -->
       <div class="col-12 col-md-6 col-xl-4 col-xxl-3">
-        <div class=" rounded position-relative h-100 pt-4 text-center card">
+        <div class=" rounded position-relative pt-4 text-center card">
           <h5 class="metric-title ">Total Uninstalled</h5>
           <h2 class="metric-value">678</h2>
-          <div class="d-flex justify-content-between px-4">
+          <div class=" d-flex justify-content-between px-4">
             <div class="submetric">
               <div class="submetric-label">Last month</div>
               <div class="submetric-value">89</div>
@@ -754,7 +476,7 @@
             </div>
           </div>
           <!-- Total Active Users chart -->
-          <div id="total-uninstalled" ></div>
+          <div id="total-uninstalled"></div>
         </div>
       </div>
 
@@ -766,7 +488,7 @@
               <div class="card-body">
                 <h6 class="card-title text-muted mb-3">Total Subscribes</h6>
                 <p class="card-text h4 mb-3">7,986</p>
-                <div class="d-flex align-items-center">
+                <div class="d-flex align-items-center pt-3">
                   <div class="progress w-100" style="height: 6px;">
                     <div class="progress-bar bg-success" role="progressbar" style="width: 75%"></div>
                   </div>
@@ -784,7 +506,7 @@
               <div class="card-body">
                 <h6 class="card-title text-muted mb-3">Total Downloads</h6>
                 <p class="card-text h4 mb-3">4,876</p>
-                <div class="d-flex align-items-center">
+                <div class="d-flex align-items-center pt-3">
                   <div class="progress w-100" style="height: 6px;">
                     <div class="progress-bar bg-primary" role="progressbar" style="width: 62%"></div>
                   </div>
@@ -803,7 +525,7 @@
               <div class="card-body">
                 <h6 class="card-title text-muted mb-3">Total Reviews</h6>
                 <p class="card-text h4 mb-3">3,768</p>
-                <div class="d-flex align-items-center">
+                <div class="d-flex align-items-center pt-3">
                   <div class="progress w-100" style="height: 6px;">
                     <div class="progress-bar bg-warning" role="progressbar" style="width: 55%"></div>
                   </div>
@@ -821,7 +543,7 @@
               <div class="card-body">
                 <h6 class="card-title text-muted mb-3">Total Shares</h6>
                 <p class="card-text h4 mb-3">2,643</p>
-                <div class="d-flex align-items-center">
+                <div class="d-flex align-items-center pt-3">
                   <div class="progress w-100" style="height: 6px;">
                     <div class="progress-bar bg-info" role="progressbar" style="width: 80%"></div>
                   </div>
@@ -861,281 +583,262 @@
 
     <!-- Column 1 -->
     <div class="row g-3 mt-1">
-      <div class="">
-        <div class="row">
-          <!-- Top Related Applications Card -->
-          <div class="col-lg-4 col-md-6 mb-4">
-  <div class="card h-100">
-    <div class="card-header">
-      <h5 class="mb-0">Top Related Applications</h5>
-    </div>
-      <ul class=" ">
-        <!-- Dash App -->
-        <li class="pe-3 py-2 border-0 list-unstyled">
-          <div class="d-flex align-items-center">
-            <div class="bg-primary bg-opacity-10 p-2 rounded me-3">
-              <i class="bi bi-graph-up text-primary"></i>
-            </div>
-            <div class="flex-grow-1">
-              <h6 class="mb-0">Dash App</h6>
-              <div class="d-flex align-items-center mt-1">
-                <span class="badge bg-light text-dark me-2">
-                  <i class="bi bi-apple me-1"></i>Mac
-                </span>
-                <span class="badge bg-success bg-opacity-10 text-success">Free</span>
-              </div>
-            </div>
-            <div class="text-end">
-              <div class="star-rating">
-                <i class="bi bi-star-fill text-warning "></i>
-                <i class="bi bi-star-fill text-warning"></i>
-                <i class="bi bi-star-fill text-warning"></i>
-                <i class="bi bi-star-fill text-warning"></i>
-                <i class="bi bi-star text-secondary"></i>
-              </div>
-              <small class="text-muted">5 reviews</small>
-            </div>
+      <!-- Top Related Applications Card -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card h-100">
+          <div class="card-header">
+            <h5 class="mb-0">Top Related Applications</h5>
           </div>
-        </li>
-        
-        <!-- Google Due -->
-        <li class="pe-3 py-2 border-0 list-unstyled">
-          <div class="d-flex align-items-center">
-            <div class="bg-info bg-opacity-10 p-2 rounded me-3">
-              <i class="bi bi-calendar-check text-info"></i>
-            </div>
-            <div class="flex-grow-1">
-              <h6 class="mb-0">Google Due</h6>
-              <div class="d-flex align-items-center mt-1">
-                <span class="badge bg-light text-dark me-2">
-                  <i class="bi bi-android2 me-1"></i>Android
-                </span>
-                <span class="badge bg-success bg-opacity-10 text-success">Free</span>
+          <ul class=" ">
+            <!-- Dash App -->
+            <li class="pe-3 py-2 border-0 list-unstyled">
+              <div class="d-flex align-items-center">
+                <div class="bg-primary bg-opacity-10 p-2 rounded me-3">
+                  <i class="bi bi-graph-up text-primary"></i>
+                </div>
+                <div class="flex-grow-1">
+                  <h6 class="mb-0">Dash App</h6>
+                  <div class="d-flex align-items-center mt-1">
+                    <span class="badge bg-light text-dark me-2">
+                      <i class="bi bi-apple me-1"></i>Mac
+                    </span>
+                    <span class="badge bg-success bg-opacity-10 text-success">Free</span>
+                  </div>
+                </div>
+                <div class="text-end">
+                  <div class="star-rating">
+                    <i class="bi bi-star-fill text-warning "></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star text-secondary"></i>
+                  </div>
+                  <small class="text-muted">5 reviews</small>
+                </div>
               </div>
-            </div>
-            <div class="text-end">
-              <div class="star-rating">
-                <i class="bi bi-star-fill text-warning"></i>
-                <i class="bi bi-star-fill text-warning"></i>
-                <i class="bi bi-star-fill text-warning"></i>
-                <i class="bi bi-star text-secondary"></i>
-                <i class="bi bi-star text-secondary"></i>
-              </div>
-              <small class="text-muted">7 reviews</small>
-            </div>
-          </div>
-        </li>
-        
-        <!-- Evernote -->
-        <li class="pe-3 py-2 border-0 list-unstyled">
-          <div class="d-flex align-items-center">
-            <div class="bg-success bg-opacity-10 p-2 rounded me-3">
-              <i class="bi bi-journal-text text-success"></i>
-            </div>
-            <div class="flex-grow-1">
-              <h6 class="mb-0">Evernote</h6>
-              <div class="d-flex align-items-center mt-1">
-                <span class="badge bg-light text-dark me-2">
-                  <i class="bi bi-windows me-1"></i>Windows
-                </span>
-                <span class="badge bg-danger bg-opacity-10 text-danger">$12</span>
-              </div>
-            </div>
-            <div class="text-end">
-              <div class="star-rating">
-                <i class="bi bi-star-fill text-warning"></i>
-                <i class="bi bi-star-fill text-warning"></i>
-                <i class="bi bi-star-fill text-warning"></i>
-                <i class="bi bi-star-fill text-warning"></i>
-                <i class="bi bi-star text-secondary"></i>
-              </div>
-              <small class="text-muted">9 reviews</small>
-            </div>
-          </div>
-        </li>
-        
-        <!-- Shazam -->
-        <li class="pe-3 py-2 border-0 list-unstyled">
-          <div class="d-flex align-items-center">
-            <div class="bg-purple bg-opacity-10 p-2 rounded me-3">
-              <i class="bi bi-music-note-beamed text-purple"></i>
-            </div>
-            <div class="flex-grow-1">
-              <h6 class="mb-0">Shazam</h6>
-              <div class="d-flex align-items-center mt-1">
-                <span class="badge bg-light text-dark me-2">
-                  <i class="bi bi-apple me-1"></i>Mac
-                </span>
-                <span class="badge bg-success bg-opacity-10 text-success">Free</span>
-              </div>
-            </div>
-            <div class="text-end">
-              <div class="star-rating">
-                <i class="bi bi-star-fill text-warning"></i>
-                <i class="bi bi-star-fill text-warning"></i>
-                <i class="bi bi-star text-secondary"></i>
-                <i class="bi bi-star text-secondary"></i>
-                <i class="bi bi-star text-secondary"></i>
-              </div>
-              <small class="text-muted">4 reviews</small>
-            </div>
-          </div>
-        </li>
-        
-        <!-- Picasa -->
-        <li class="pe-3 py-2 border-0 list-unstyled">
-          <div class="d-flex align-items-center">
-            <div class="bg-warning bg-opacity-10 p-2 rounded me-3">
-              <i class="bi bi-image text-warning"></i>
-            </div>
-            <div class="flex-grow-1">
-              <h6 class="mb-0">Picasa</h6>
-              <div class="d-flex align-items-center mt-1">
-                <span class="badge bg-light text-dark me-2">
-                  <i class="bi bi-windows me-1"></i>Windows
-                </span>
-                <span class="badge bg-success bg-opacity-10 text-success">Free</span>
-              </div>
-            </div>
-            <div class="text-end">
-              <div class="star-rating">
-                <i class="bi bi-star-fill text-warning"></i>
-                <i class="bi bi-star-fill text-warning"></i>
-                <i class="bi bi-star-fill text-warning"></i>
-                <i class="bi bi-star text-secondary"></i>
-                <i class="bi bi-star text-secondary"></i>
-              </div>
-              <small class="text-muted">6 reviews</small>
-            </div>
-          </div>
-        </li>
-      </ul>
-  </div>
-</div>
+            </li>
 
-          <!-- User Feedback Card -->
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card h-100">
-              <div class="card-header">
-                User Feedback
+            <!-- Google Due -->
+            <li class="pe-3 py-2 border-0 list-unstyled">
+              <div class="d-flex align-items-center">
+                <div class="bg-info bg-opacity-10 p-2 rounded me-3">
+                  <i class="bi bi-calendar-check text-info"></i>
+                </div>
+                <div class="flex-grow-1">
+                  <h6 class="mb-0">Google Due</h6>
+                  <div class="d-flex align-items-center mt-1">
+                    <span class="badge bg-light text-dark me-2">
+                      <i class="bi bi-android2 me-1"></i>Android
+                    </span>
+                    <span class="badge bg-success bg-opacity-10 text-success">Free</span>
+                  </div>
+                </div>
+                <div class="text-end">
+                  <div class="star-rating">
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star text-secondary"></i>
+                    <i class="bi bi-star text-secondary"></i>
+                  </div>
+                  <small class="text-muted">7 reviews</small>
+                </div>
               </div>
-              <div class="card-body px-3">
-                <div class="feedback-item">
-                  <div class="d-flex ">
-                    <div class="avatar me-3">
-                      <img src="../../assets/images/avater/1.jpg" alt="Samantha Wilson" class="img-fluid avater rounded-circle">
+            </li>
+
+            <!-- Evernote -->
+            <li class="pe-3 py-2 border-0 list-unstyled">
+              <div class="d-flex align-items-center">
+                <div class="bg-success bg-opacity-10 p-2 rounded me-3">
+                  <i class="bi bi-journal-text text-success"></i>
+                </div>
+                <div class="flex-grow-1">
+                  <h6 class="mb-0">Evernote</h6>
+                  <div class="d-flex align-items-center mt-1">
+                    <span class="badge bg-light text-dark me-2">
+                      <i class="bi bi-windows me-1"></i>Windows
+                    </span>
+                    <span class="badge bg-danger bg-opacity-10 text-danger">$12</span>
+                  </div>
+                </div>
+                <div class="text-end">
+                  <div class="star-rating">
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star text-secondary"></i>
+                  </div>
+                  <small class="text-muted">9 reviews</small>
+                </div>
+              </div>
+            </li>
+
+            <!-- Shazam -->
+            <li class="pe-3 py-2 border-0 list-unstyled">
+              <div class="d-flex align-items-center">
+                <div class="bg-secondary bg-opacity-10 p-2 rounded me-3">
+                  <i class="bi bi-music-note-beamed text-purple"></i>
+                </div>
+                <div class="flex-grow-1">
+                  <h6 class="mb-0">Shazam</h6>
+                  <div class="d-flex align-items-center mt-1">
+                    <span class="badge bg-light text-dark me-2">
+                      <i class="bi bi-apple me-1"></i>Mac
+                    </span>
+                    <span class="badge bg-success bg-opacity-10 text-success">Free</span>
+                  </div>
+                </div>
+                <div class="text-end">
+                  <div class="star-rating">
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star text-secondary"></i>
+                    <i class="bi bi-star text-secondary"></i>
+                    <i class="bi bi-star text-secondary"></i>
+                  </div>
+                  <small class="text-muted">4 reviews</small>
+                </div>
+              </div>
+            </li>
+
+            <!-- Picasa -->
+            <li class="pe-3 py-2 border-0 list-unstyled">
+              <div class="d-flex align-items-center">
+                <div class="bg-warning bg-opacity-10 p-2 rounded me-3">
+                  <i class="bi bi-image text-warning"></i>
+                </div>
+                <div class="flex-grow-1">
+                  <h6 class="mb-0">Picasa</h6>
+                  <div class="d-flex align-items-center mt-1">
+                    <span class="badge bg-light text-dark me-2">
+                      <i class="bi bi-windows me-1"></i>Windows
+                    </span>
+                    <span class="badge bg-success bg-opacity-10 text-success">Free</span>
+                  </div>
+                </div>
+                <div class="text-end">
+                  <div class="star-rating">
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star text-secondary"></i>
+                    <i class="bi bi-star text-secondary"></i>
+                  </div>
+                  <small class="text-muted">6 reviews</small>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- User Feedback Card -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card h-100">
+          <div class="card-header">
+            User Feedback
+          </div>
+          <div class="card-body px-3">
+            <div class="feedback-item">
+              <div class="d-flex ">
+                <div class="avatar me-3">
+                  <img src="../../assets/images/avater/1.jpg" alt="Samantha Wilson"
+                    class="img-fluid avater rounded-circle">
+                </div>
+                <div class="flex-grow-1">
+                  <div class="row">
+                    <div class="col-lg-8 col-md-7 col-8">
+                      <div class="feedback-name">Samantha Wilson</div>
+                      <div class="feedback-text">long established fact...</div>
                     </div>
-                    <div class="flex-grow-1">
-                      <div class="row">
-                        <div class="col-lg-8 col-md-7 col-8">
-                          <div class="feedback-name">Samantha Wilson</div>
-                          <div class="feedback-text">long established fact...</div>
-                        </div>
-                        <div class="col-lg-4 col-md-5 col-4 text-end">
-                          <div class="feedback-date">
-                            <i class="far fa-calendar-alt me-1"></i>28 Feb 2020
-                          </div>
-                        </div>
+                    <div class="col-lg-4 col-md-5 col-4 text-end">
+                      <div class="feedback-date">
+                        <i class="far fa-calendar-alt me-1"></i>28 Feb 2020
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="feedback-item">
-                  <div class="d-flex">
-                    <div class="avatar me-3">
-                      <img src="../../assets/images/avater/2.jpg" alt="Samantha Wilson" class="img-fluid avater rounded-circle">
+              </div>
+            </div>
+            <div class="feedback-item">
+              <div class="d-flex">
+                <div class="avatar me-3">
+                  <img src="../../assets/images/avater/2.jpg" alt="Samantha Wilson"
+                    class="img-fluid avater rounded-circle">
+                </div>
+                <div class="flex-grow-1">
+                  <div class="row">
+                    <div class="col-lg-8 col-md-7 col-8">
+                      <div class="feedback-name">Kevin North</div>
+                      <div class="feedback-text">Itaque earum rerum tenetur.</div>
                     </div>
-                    <div class="flex-grow-1">
-                      <div class="row">
-                        <div class="col-lg-8 col-md-7 col-8">
-                          <div class="feedback-name">Kevin North</div>
-                          <div class="feedback-text">Itaque earum rerum tenetur.</div>
-                        </div>
-                        <div class="col-lg-4 col-md-5 col-4 text-end">
-                          <div class="feedback-date">
-                            <i class="far fa-calendar-alt me-1"></i>28 Feb 2020
-                          </div>
-                        </div>
+                    <div class="col-lg-4 col-md-5 col-4 text-end">
+                      <div class="feedback-date">
+                        <i class="far fa-calendar-alt me-1"></i>28 Feb 2020
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="feedback-item">
-                  <div class="d-flex">
-                    <div class="avatar me-3">
-                      <img src="../../assets/images/avater/3.jpg" alt="Samantha Wilson" class="img-fluid avater rounded-circle">
+              </div>
+            </div>
+            <div class="feedback-item">
+              <div class="d-flex">
+                <div class="avatar me-3">
+                  <img src="../../assets/images/avater/3.jpg" alt="Samantha Wilson"
+                    class="img-fluid avater rounded-circle">
+                </div>
+                <div class="flex-grow-1">
+                  <div class="row">
+                    <div class="col-lg-8 col-md-7 col-8">
+                      <div class="feedback-name">Steven Fisher</div>
+                      <div class="feedback-text">Itaque earum rerum tenetur.</div>
                     </div>
-                    <div class="flex-grow-1">
-                      <div class="row">
-                        <div class="col-lg-8 col-md-7 col-8">
-                          <div class="feedback-name">Steven Fisher</div>
-                          <div class="feedback-text">Itaque earum rerum tenetur.</div>
-                        </div>
-                        <div class="col-lg-4 col-md-5 col-4 text-end">
-                          <div class="feedback-date">
-                            <i class="far fa-calendar-alt me-1"></i>28 Feb 2020
-                          </div>
-                        </div>
+                    <div class="col-lg-4 col-md-5 col-4 text-end">
+                      <div class="feedback-date">
+                        <i class="far fa-calendar-alt me-1"></i>28 Feb 2020
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="feedback-item">
-                  <div class="d-flex">
-                    <div class="avatar me-3">
-                      <img src="../../assets/images/avater/4.jpg" alt="Samantha Wilson" class="img-fluid avater rounded-circle">
+              </div>
+            </div>
+            <div class="feedback-item">
+              <div class="d-flex">
+                <div class="avatar me-3">
+                  <img src="../../assets/images/avater/4.jpg" alt="Samantha Wilson"
+                    class="img-fluid avater rounded-circle">
+                </div>
+                <div class="flex-grow-1">
+                  <div class="row">
+                    <div class="col-lg-8 col-md-7 col-8">
+                      <div class="feedback-name">Cathie Madonna</div>
+                      <div class="feedback-text">Itaque earum rerum tenetur.</div>
                     </div>
-                    <div class="flex-grow-1">
-                      <div class="row">
-                        <div class="col-lg-8 col-md-7 col-8">
-                          <div class="feedback-name">Cathie Madonna</div>
-                          <div class="feedback-text">Itaque earum rerum tenetur.</div>
-                        </div>
-                        <div class="col-lg-4 col-md-5 col-4 text-end">
-                          <div class="feedback-date">
-                            <i class="far fa-calendar-alt me-1"></i>28 Feb 2020
-                          </div>
-                        </div>
+                    <div class="col-lg-4 col-md-5 col-4 text-end">
+                      <div class="feedback-date">
+                        <i class="far fa-calendar-alt me-1"></i>28 Feb 2020
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="feedback-item">
-                  <div class="d-flex">
-                    <div class="avatar me-3">
-                      <img src="../../assets/images/avater/5.jpg" alt="Samantha Wilson" class="img-fluid avater rounded-circle">
-                    </div>
-                    <div class="flex-grow-1">
-                      <div class="row">
-                        <div class="col-lg-8 col-md-7 col-8">
-                          <div class="feedback-name">Joanne Taylor</div>
-                          <div class="feedback-text">Itaque earum rerum tenetur.</div>
-                        </div>
-                        <div class="col-lg-4 col-md-5 col-4 text-end">
-                          <div class="feedback-date">
-                            <i class="far fa-calendar-alt me-1"></i>28 Feb 2020
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+              </div>
+            </div>
+            <div class="feedback-item">
+              <div class="d-flex">
+                <div class="avatar me-3">
+                  <img src="../../assets/images/avater/5.jpg" alt="Samantha Wilson"
+                    class="img-fluid avater rounded-circle">
                 </div>
-                <div class="feedback-item">
-                  <div class="d-flex">
-                    <div class="avatar me-3">
-                      <img src="../../assets/images/avater/6.jpg" alt="Samantha Wilson" class="img-fluid avater rounded-circle">
+                <div class="flex-grow-1">
+                  <div class="row">
+                    <div class="col-lg-8 col-md-7 col-8">
+                      <div class="feedback-name">Joanne Taylor</div>
+                      <div class="feedback-text">Itaque earum rerum tenetur.</div>
                     </div>
-                    <div class="flex-grow-1">
-                      <div class="row">
-                        <div class="col-lg-8 col-md-7 col-8">
-                          <div class="feedback-name">Joanne Taylor</div>
-                          <div class="feedback-text">Itaque earum rerum tenetur.</div>
-                        </div>
-                        <div class="col-lg-4 col-md-5 col-4 text-end">
-                          <div class="feedback-date">
-                            <i class="far fa-calendar-alt me-1"></i>28 Feb 2020
-                          </div>
-                        </div>
+                    <div class="col-lg-4 col-md-5 col-4 text-end">
+                      <div class="feedback-date">
+                        <i class="far fa-calendar-alt me-1"></i>28 Feb 2020
                       </div>
                     </div>
                   </div>
@@ -1143,101 +846,109 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
 
-          <!-- Top Installed Countries Card -->
-          <div class="col-lg-4 col-md-12 mb-4">
-            <div class="card h-100">
-              <div class="card-header">
-                Top Installed Countries
+      <!-- Top Installed Countries Card -->
+      <div class="col-lg-4 col-md-12 mb-4">
+        <div class="card h-100">
+          <div class="card-header">
+            Top Installed Countries
+          </div>
+          <div class="card-body px-3">
+            <div class="country-item py-1">
+              <div class="d-flex align-items-center">
+                <img src="../../assets/images/flags/us.jpg" alt="USA Flag"
+                  class="flag-icon avater rounded-circle me-3">
+                <div class="country-name flex-grow-1">USA</div>
+                <div class="d-flex justify-content-between">
+                  <span class="stat-text me-3"><i class="bi bi-android2 me-1"></i>6k</span>
+                  <span class="stat-text me-3"><i class="bi bi-windows me-1"></i>5k</span>
+                  <span class="stat-text"><i class="bi bi-apple me-1"></i>3k</span>
+                </div>
               </div>
-              <div class="card-body px-3">
-                <div class="country-item py-1">
-                  <div class="d-flex align-items-center">
-                    <img src="../../assets/images/flags/us.jpg" alt="USA Flag" class="flag-icon avater rounded-circle me-3">
-                    <div class="country-name flex-grow-1">USA</div>
-                    <div>
-                      <span class="stat-text"><i class="bi bi-android2"></i>6k</span>
-                      <span class="stat-text"><i class="bi bi-windows"></i>5k</span>
-                      <span class="stat-text"><i class="bi bi-apple"></i>3k</span>
-                    </div>
-                  </div>
+            </div>
+            <div class="country-item py-1">
+              <div class="d-flex align-items-center">
+                <img src="../../assets/images/flags/italy.jpg" alt="USA Flag"
+                  class="flag-icon avater rounded-circle me-3">
+                <div class="country-name flex-grow-1">Italy</div>
+                <div class="d-flex justify-content-between">
+                  <span class="stat-text me-3"><i class="bi bi-android2 me-1"></i>6k</span>
+                  <span class="stat-text me-3"><i class="bi bi-windows me-1"></i>5k</span>
+                  <span class="stat-text"><i class="bi bi-apple me-1"></i>3k</span>
                 </div>
-                <div class="country-item py-1">
-                  <div class="d-flex align-items-center">
-                    <img src="../../assets/images/flags/italy.jpg" alt="USA Flag" class="flag-icon avater rounded-circle me-3">
-                    <div class="country-name flex-grow-1">Italy</div>
-                    <div>
-                      <span class="stat-text"><i class="fas fa-circle stat-icon"></i>4k</span>
-                      <span class="stat-text"><i class="fas fa-circle stat-icon mac"></i>6k</span>
-                      <span class="stat-text"><i class="fas fa-circle stat-icon windows"></i>2k</span>
-                    </div>
-                  </div>
+              </div>
+            </div>
+            <div class="country-item py-1">
+              <div class="d-flex align-items-center">
+                <img src="../../assets/images/flags/spain.jpg" alt="USA Flag"
+                  class="flag-icon avater rounded-circle me-3">
+                <div class="country-name flex-grow-1">Spain</div>
+                <div class="d-flex justify-content-between">
+                  <span class="stat-text me-3"><i class="bi bi-android2 me-1"></i>6k</span>
+                  <span class="stat-text me-3"><i class="bi bi-windows me-1"></i>5k</span>
+                  <span class="stat-text"><i class="bi bi-apple me-1"></i>3k</span>
                 </div>
-                <div class="country-item py-1">
-                  <div class="d-flex align-items-center">
-                    <img src="../../assets/images/flags/spain.jpg" alt="USA Flag" class="flag-icon avater rounded-circle me-3">
-                    <div class="country-name flex-grow-1">Spain</div>
-                    <div>
-                      <span class="stat-text"><i class="fas fa-circle stat-icon"></i>7k</span>
-                      <span class="stat-text"><i class="fas fa-circle stat-icon mac"></i>2k</span>
-                      <span class="stat-text"><i class="fas fa-circle stat-icon windows"></i>8k</span>
-                    </div>
-                  </div>
+              </div>
+            </div>
+            <div class="country-item py-1">
+              <div class="d-flex align-items-center">
+                <img src="../../assets/images/flags/russia.jpg" alt="USA Flag"
+                  class="flag-icon avater rounded-circle me-3">
+                <div class="country-name flex-grow-1">Russia</div>
+                <div class="d-flex justify-content-between">
+                  <span class="stat-text me-3"><i class="bi bi-android2 me-1"></i>6k</span>
+                  <span class="stat-text me-3"><i class="bi bi-windows me-1"></i>5k</span>
+                  <span class="stat-text"><i class="bi bi-apple me-1"></i>3k</span>
                 </div>
-                <div class="country-item py-1">
-                  <div class="d-flex align-items-center">
-                    <img src="../../assets/images/flags/russia.jpg" alt="USA Flag" class="flag-icon avater rounded-circle me-3">
-                    <div class="country-name flex-grow-1">Russia</div>
-                    <div>
-                      <span class="stat-text"><i class="fas fa-circle stat-icon"></i>1k</span>
-                      <span class="stat-text"><i class="fas fa-circle stat-icon mac"></i>3k</span>
-                      <span class="stat-text"><i class="fas fa-circle stat-icon windows"></i>5k</span>
-                    </div>
-                  </div>
+              </div>
+            </div>
+            <div class="country-item py-1">
+              <div class="d-flex align-items-center">
+                <img src="../../assets/images/flags/germany.jpg" alt="USA Flag"
+                  class="flag-icon avater rounded-circle me-3">
+                <div class="country-name flex-grow-1">Germany</div>
+                <div class="d-flex justify-content-between">
+                  <span class="stat-text me-3"><i class="bi bi-android2 me-1"></i>6k</span>
+                  <span class="stat-text me-3"><i class="bi bi-windows me-1"></i>5k</span>
+                  <span class="stat-text"><i class="bi bi-apple me-1"></i>3k</span>
                 </div>
-                <div class="country-item py-1">
-                  <div class="d-flex align-items-center">
-                    <img src="../../assets/images/flags/germany.jpg" alt="USA Flag" class="flag-icon avater rounded-circle me-3">
-                    <div class="country-name flex-grow-1">Germany</div>
-                    <div>
-                      <span class="stat-text"><i class="fas fa-circle stat-icon"></i>8k</span>
-                      <span class="stat-text"><i class="fas fa-circle stat-icon mac"></i>4k</span>
-                      <span class="stat-text"><i class="fas fa-circle stat-icon windows"></i>3k</span>
-                    </div>
-                  </div>
+              </div>
+            </div>
+            <div class="country-item py-1">
+              <div class="d-flex align-items-center">
+                <img src="../../assets/images/flags/french.jpg" alt="USA Flag"
+                  class="flag-icon avater rounded-circle me-3">
+                <div class="country-name flex-grow-1">France</div>
+                <div class="d-flex justify-content-between">
+                  <span class="stat-text me-3"><i class="bi bi-android2 me-1"></i>6k</span>
+                  <span class="stat-text me-3"><i class="bi bi-windows me-1"></i>5k</span>
+                  <span class="stat-text"><i class="bi bi-apple me-1"></i>3k</span>
                 </div>
-                <div class="country-item py-1">
-                  <div class="d-flex align-items-center">
-                    <img src="../../assets/images/flags/french.jpg" alt="USA Flag" class="flag-icon avater rounded-circle me-3">
-                    <div class="country-name flex-grow-1">France</div>
-                    <div>
-                      <span class="stat-text"><i class="fas fa-circle stat-icon"></i>2k</span>
-                      <span class="stat-text"><i class="fas fa-circle stat-icon mac"></i>5k</span>
-                      <span class="stat-text"><i class="fas fa-circle stat-icon windows"></i>8k</span>
-                    </div>
-                  </div>
+              </div>
+            </div>
+            <div class="country-item py-1">
+              <div class="d-flex align-items-center">
+                <img src="../../assets/images/flags/india.jpg" alt="USA Flag"
+                  class="flag-icon avater rounded-circle me-3">
+                <div class="country-name flex-grow-1">India</div>
+                <div class="d-flex justify-content-between">
+                  <span class="stat-text me-3"><i class="bi bi-android2 me-1"></i>6k</span>
+                  <span class="stat-text me-3"><i class="bi bi-windows me-1"></i>5k</span>
+                  <span class="stat-text"><i class="bi bi-apple me-1"></i>3k</span>
                 </div>
-                <div class="country-item py-1">
-                  <div class="d-flex align-items-center">
-                    <img src="../../assets/images/flags/india.jpg" alt="USA Flag" class="flag-icon avater rounded-circle me-3">
-                    <div class="country-name flex-grow-1">India</div>
-                    <div>
-                      <span class="stat-text"><i class="fas fa-circle stat-icon"></i>4k</span>
-                      <span class="stat-text"><i class="fas fa-circle stat-icon mac"></i>1k</span>
-                      <span class="stat-text"><i class="fas fa-circle stat-icon windows"></i>3k</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="country-item py-1">
-                  <div class="d-flex align-items-center">
-                    <img src="../../assets/images/flags/argentina.jpg" alt="USA Flag" class="flag-icon avater rounded-circle me-3">
-                    <div class="country-name flex-grow-1">Argentina</div>
-                    <div>
-                      <span class="stat-text"><i class="fas fa-circle stat-icon"></i>4k</span>
-                      <span class="stat-text"><i class="fas fa-circle stat-icon mac"></i>3k</span>
-                      <span class="stat-text"><i class="fas fa-circle stat-icon windows"></i>5k</span>
-                    </div>
-                  </div>
+              </div>
+            </div>
+            <div class="country-item py-1">
+              <div class="d-flex align-items-center">
+                <img src="../../assets/images/flags/argentina.jpg" alt="USA Flag"
+                  class="flag-icon avater rounded-circle me-3">
+                <div class="country-name flex-grow-1">Argentina</div>
+                <div class="d-flex justify-content-between">
+                  <span class="stat-text me-3"><i class="bi bi-android2 me-1"></i>6k</span>
+                  <span class="stat-text me-3"><i class="bi bi-windows me-1"></i>5k</span>
+                  <span class="stat-text"><i class="bi bi-apple me-1"></i>3k</span>
                 </div>
               </div>
             </div>
@@ -1261,7 +972,7 @@
                 <th>ACTION</th>
               </tr>
             </thead>
-            <tbody >
+            <tbody>
               <tr class="text-muted">
                 <td>#INV-348</td>
                 <td>Android</td>
@@ -1270,7 +981,7 @@
                 <td>17-12-2020</td>
                 <td>
                   <i class="bi bi-eye mx-3"></i>
-                 <i class="bi bi-trash text-danger fs-6 icon"></i>
+                  <i class="bi bi-trash text-danger fs-6 icon"></i>
                 </td>
               </tr>
               <tr>
@@ -1281,7 +992,7 @@
                 <td>14-12-2020</td>
                 <td>
                   <i class="bi bi-eye mx-3"></i>
-                 <i class="bi bi-trash text-danger fs-6 icon"></i>
+                  <i class="bi bi-trash text-danger fs-6 icon"></i>
                 </td>
               </tr>
               <tr>
@@ -1292,7 +1003,7 @@
                 <td>04-12-2020</td>
                 <td>
                   <i class="bi bi-eye mx-3"></i>
-                 <i class="bi bi-trash text-danger fs-6 icon"></i>
+                  <i class="bi bi-trash text-danger fs-6 icon"></i>
                 </td>
               </tr>
               <tr>
@@ -1303,7 +1014,7 @@
                 <td>07-12-2020</td>
                 <td>
                   <i class="bi bi-eye mx-3"></i>
-                 <i class="bi bi-trash text-danger fs-6 icon"></i>
+                  <i class="bi bi-trash text-danger fs-6 icon"></i>
                 </td>
               </tr>
               <tr>
@@ -1314,7 +1025,7 @@
                 <td>11-12-2020</td>
                 <td>
                   <i class="bi bi-eye mx-3"></i>
-                 <i class="bi bi-trash text-danger fs-6 icon"></i>
+                  <i class="bi bi-trash text-danger fs-6 icon"></i>
                 </td>
               </tr>
               <tr>
@@ -1325,7 +1036,7 @@
                 <td>12-12-2020</td>
                 <td>
                   <i class="bi bi-eye mx-3"></i>
-                 <i class="bi bi-trash text-danger fs-6 icon"></i>
+                  <i class="bi bi-trash text-danger fs-6 icon"></i>
                 </td>
               </tr>
               <tr>
@@ -1336,7 +1047,7 @@
                 <td>07-12-2020</td>
                 <td>
                   <i class="bi bi-eye mx-3"></i>
-                 <i class="bi bi-trash text-danger fs-6 icon"></i>
+                  <i class="bi bi-trash text-danger fs-6 icon"></i>
                 </td>
               </tr>
             </tbody>

@@ -30,7 +30,7 @@ var options = {
       breakpoint: 480,
       options: {
         chart: {
-          width: "100%", 
+          width: "100%",
         },
         legend: {
           position: "bottom",
@@ -599,7 +599,7 @@ var options = {
             fontSize: '16px',
             fontWeight: 'bold',
             color: '#373d3f',
-            formatter: function(w) {
+            formatter: function (w) {
               return '143'; // Hardcoded total from your image
             }
           },
@@ -607,7 +607,7 @@ var options = {
             fontSize: '24px',
             fontWeight: 'bold',
             color: '#373d3f',
-            formatter: function(val) {
+            formatter: function (val) {
               return val + '%';
             }
           }
@@ -665,7 +665,7 @@ var options = {
     data: [39, 40, 28, 51, 42, 109, 100]
   }],
   chart: {
-    height: 250,
+    height: 180,
     width: '100%', // Set width to 100% for responsiveness 
     type: 'area',
     toolbar: {
@@ -691,12 +691,12 @@ var options = {
   xaxis: {
     type: 'datetime',
     categories: [
-      "2018-09-19T00:00:00.000Z", 
-      "2018-09-19T01:30:00.000Z", 
-      "2018-09-19T02:30:00.000Z", 
-      "2018-09-19T03:30:00.000Z", 
-      "2018-09-19T04:30:00.000Z", 
-      "2018-09-19T05:30:00.000Z", 
+      "2018-09-19T00:00:00.000Z",
+      "2018-09-19T01:30:00.000Z",
+      "2018-09-19T02:30:00.000Z",
+      "2018-09-19T03:30:00.000Z",
+      "2018-09-19T04:30:00.000Z",
+      "2018-09-19T05:30:00.000Z",
       "2018-09-19T06:30:00.000Z"
     ],
     labels: {
@@ -725,7 +725,7 @@ var options = {
     data: [31, 40, 28, 51, 42, 98, 80]
   }],
   chart: {
-    height: 250, // Reduced height to fit better with the metrics
+    height: 180, // Reduced height to fit better with the metrics
     type: 'area',
     toolbar: {
       show: false // Hide the toolbar for cleaner UI
@@ -750,12 +750,12 @@ var options = {
   xaxis: {
     type: 'datetime',
     categories: [
-      "2018-09-19T00:00:00.000Z", 
-      "2018-09-19T01:30:00.000Z", 
-      "2018-09-19T02:30:00.000Z", 
-      "2018-09-19T03:30:00.000Z", 
-      "2018-09-19T04:30:00.000Z", 
-      "2018-09-19T05:30:00.000Z", 
+      "2018-09-19T00:00:00.000Z",
+      "2018-09-19T01:30:00.000Z",
+      "2018-09-19T02:30:00.000Z",
+      "2018-09-19T03:30:00.000Z",
+      "2018-09-19T04:30:00.000Z",
+      "2018-09-19T05:30:00.000Z",
       "2018-09-19T06:30:00.000Z"
     ],
     labels: {
@@ -776,4 +776,304 @@ var options = {
 };
 
 var chart = new ApexCharts(document.querySelector("#total-uninstalled"), options);
+chart.render();
+
+// analytics page ***
+// Website Audience Overview
+var options = {
+  series: [{
+    name: 'Net Profit',
+    data: [44, 55, 57, 56, 61, 58, 63, 60, 66]
+  }, {
+    name: 'Free Cash Flow',
+    data: [35, 41, 36, 26, 45, 48, 52, 53, 41]
+  }],
+  chart: {
+    type: 'bar',
+    height: 350,
+
+  },
+  plotOptions: {
+    bar: {
+      horizontal: false,
+      columnWidth: '55%',
+      borderRadius: 5,
+      borderRadiusApplication: 'end'
+    },
+  },
+  dataLabels: {
+    enabled: false
+  },
+  stroke: {
+    show: true,
+    width: 2,
+    colors: ['transparent']
+  },
+  xaxis: {
+    categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
+  },
+  yaxis: {
+    title: {
+      text: '$ (thousands)'
+    }
+  },
+  fill: {
+    opacity: 1
+  },
+  tooltip: {
+    y: {
+      formatter: function (val) {
+        return "$ " + val + " thousands"
+      }
+    }
+  }
+};
+
+var chart = new ApexCharts(document.querySelector("#website-audience-overview"), options);
+chart.render();
+
+// Traffic Source
+var options = {
+  series: [30, 50, 20], // Direct, Organic, Campaign percentages
+  chart: {
+    type: 'donut',
+    height: 350,
+  },
+  labels: ['Direct', 'Organic', 'Campaign'],
+  colors: ['#FF4560', '#008FFB', '#00E396'], // Different colors for each segment
+  plotOptions: {
+    pie: {
+      donut: {
+        size: '70%',
+        labels: {
+          show: true,
+          total: {
+            show: true,
+            label: 'Total',
+            fontSize: '16px',
+            fontWeight: 'bold',
+            color: '#373d3f',
+            formatter: function (w) {
+              return '105'; // Total from your image
+            }
+          },
+          value: {
+            fontSize: '24px',
+            fontWeight: 'bold',
+            color: '#373d3f',
+            formatter: function (val) {
+              return val + '%';
+            }
+          }
+        }
+      }
+    }
+  },
+  dataLabels: {
+    enabled: false,
+    formatter: function (val, opts) {
+      return opts.w.config.labels[opts.seriesIndex] + ': ' + val + '%';
+    },
+    style: {
+      fontSize: '12px',
+      colors: ['#fff']
+    },
+    dropShadow: {
+      enabled: false
+    }
+  },
+  legend: {
+    position: 'bottom',
+    horizontalAlign: 'center',
+    fontSize: '14px',
+    markers: {
+      width: 12,
+      height: 12,
+      radius: 12,
+    },
+    itemMargin: {
+      horizontal: 10,
+      vertical: 5
+    }
+  },
+  title: {
+    text: '',
+    align: 'center',
+    margin: 10,
+    style: {
+      fontSize: '18px',
+      fontWeight: 'bold',
+      color: '#263238'
+    }
+  },
+  responsive: [{
+    breakpoint: 480,
+    options: {
+      chart: {
+        width: 300
+      },
+      legend: {
+        position: 'bottom'
+      }
+    }
+  }]
+};
+
+var chart = new ApexCharts(document.querySelector("#traffic-source"), options);
+chart.render();
+
+// Session By Countries
+ var options = {
+          series: [{
+          data: [400, 430, 448, 470, 540, 580, 690, 1100, 1200, 1380]
+        }],
+          chart: {
+          type: 'bar',
+          height: 350
+        },
+        plotOptions: {
+          bar: {
+            borderRadius: 4,
+            borderRadiusApplication: 'end',
+            horizontal: true,
+          }
+        },
+        dataLabels: {
+          enabled: false
+        },
+        xaxis: {
+          categories: ['Korea', 'Canada', 'UK', 'Netherlands', 'Italy', 'France', 'Japan',
+            'USA', 'China', 'Germany'
+          ],
+        }
+        };
+
+        var chart = new ApexCharts(document.querySelector("#session-by-countries"), options);
+        chart.render();
+      
+// LMS page ***
+// 
+var options = {
+  series: [
+    {
+      name: "Learners",
+      type: "column",
+      data: [19.4, 29, 20.5, 35.5, 40.5, 47, 38, 69],
+    },
+    {
+      name: "Time",
+      type: "column",
+      data: [15.1, 30, 30.1, 40, 45, 49, 43, 59],
+    },
+    {
+      name: "Progress",
+      type: "line",
+      data: [20, 29, 37, 36, 44, 45, 50, 58],
+    },
+  ],
+  chart: {
+    height: 350,
+    type: "line",
+    stacked: false,
+  },
+  dataLabels: {
+    enabled: false,
+  },
+  stroke: {
+    width: [1, 1, 4],
+  },
+  title: {
+    text: "",
+    align: "left",
+    offsetX: 110,
+  },
+  xaxis: {
+    categories: [2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016],
+  },
+  yaxis: [
+    {
+      seriesName: "Income",
+      axisTicks: {
+        show: true,
+      },
+      axisBorder: {
+        show: true,
+        color: "#008FFB",
+      },
+      labels: {
+        style: {
+          colors: "#008FFB",
+        },
+      },
+      title: {
+        text: "Income (thousand crores)",
+        style: {
+          color: "#008FFB",
+        },
+      },
+      tooltip: {
+        enabled: true,
+      },
+    },
+  ],
+  tooltip: {
+    fixed: {
+      enabled: true,
+      position: "topLeft", // topRight, topLeft, bottomRight, bottomLeft
+      offsetY: 30,
+      offsetX: 60,
+    },
+  },
+  legend: {
+    horizontalAlign: "left",
+    offsetX: 40,
+  },
+};
+
+var chart = new ApexCharts(
+  document.querySelector("#learners-with-time-sent-monthlywise"),
+  options
+);
+chart.render();
+
+// 
+var options = {
+  series: [56, 25, 10, 9],
+  labels: ["Completed", "In Progress", "Not Completed", "Not Started"],
+  chart: {
+    type: "donut",
+    width: "100%",
+    height: 350,
+  },
+  plotOptions: {
+    pie: {
+      startAngle: -90,
+      endAngle: 270,
+    },
+  },
+  dataLabels: {
+    enabled: false,
+  },
+
+  legend: {
+    position: "bottom",
+    formatter: function (val, opts) {
+      return val + " - " + opts.w.globals.series[opts.seriesIndex];
+    },
+  },
+  responsive: [
+    {
+      breakpoint: 480,
+      options: {
+        chart: {
+          width: "100%",
+        },
+        legend: {
+          position: "bottom",
+        },
+      },
+    },
+  ],
+};
+var chart = new ApexCharts(document.querySelector("#course-progress"), options);
 chart.render();

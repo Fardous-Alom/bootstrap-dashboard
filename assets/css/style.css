@@ -59,7 +59,7 @@ header {
   cursor: pointer;
 }
 
-.drop-width{
+.dropdown-list{
   width: 300px;
 }
 
@@ -179,6 +179,12 @@ header {
 [data-bs-theme=dark] .input-field {
   background-color: var(--color-bg-dark);
 }
+
+[data-bs-theme=dark] .dropdown-list{
+ background-color: var(--color-surface-dark);
+ color: var(--color-text-dark);
+}
+
 
 /* dark sidebar start */
 [data-bs-theme=dark] .sidebar.collapsed ul.nav > li > ul.submenu {

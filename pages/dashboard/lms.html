@@ -333,10 +333,10 @@
             <a class="nav-link" href="app.html">App</a>
           </li>
           <li class="nav-item list-unstyled">
-            <a class="nav-link active" href="#">Analytics</a>
+            <a class="nav-link" href="analytics.html">Analytics</a>
           </li>
           <li class="nav-item list-unstyled">
-            <a class="nav-link" href="lms.html">LMS</a>
+            <a class="nav-link active" href="#">LMS</a>
           </li>
         </ul>
       </li>
@@ -429,145 +429,188 @@
 
   <!-- Main Content start -->
   <main class="main-content">
-    <h4 class="px-1 text-muted">Analytics Dashboard</h4>
+    <h4 class="px-1 text-muted">LMS Dashboard</h4>
     <!-- Breadcrumb -->
     <nav aria-label="breadcrumb px-2">
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="#">Home</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Analytics</li>
+        <li class="breadcrumb-item active" aria-current="page">LMS</li>
       </ol>
     </nav>
 
     <!-- cards -->
     <div class="row g-3">
       <!-- Card 1 -->
-      <div class="col-12 col-sm-6 col-lg-3">
-        <div class="card shadow-sm rounded d-flex flex-row justify-content-between align-items-center p-4">
-          <div class="bg-primary bg-opacity-75 rounded-circle d-flex align-items-center justify-content-center"
-            style="width: 40px; height: 40px;">
-            <i class="bi bi-arrow-repeat fs-6 text-white"></i>
-          </div>
-          <div class="">
-            <h6 class="text-secondary mb-1">Total Sessions</h6>
-            <p class="fs-2 fw-bold text-muted mb-0">7,896</p>
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card border-0 shadow-sm p-4">
+          <div class="d-flex justify-content-between align-items-center">
+            <div>
+              <p class="mb-1 text-muted">Total Students</p>
+              <h4 class="fw-bold mb-0">479</h4>
+              <small class="d-block mt-2">
+                <span class="text-success fw-semibold">
+                  <i class="bi bi-arrow-up-right"></i> 2.6%
+                </span>
+                <span class="text-muted">than last week</span>
+              </small>
+            </div>
+            <!-- Simulated circular progress -->
+            <div style="width: 40px; height: 40px; position: relative;">
+              <svg viewBox="0 0 36 36" class="circular-chart" style="width:100%; height:100%;">
+                <path class="circle-bg"
+                  stroke="#eee"
+                  stroke-width="4"
+                  fill="none"
+                  d="M18 2.0845
+                    a 15.9155 15.9155 0 0 1 0 31.831
+                    a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                <path class="circle"
+                  stroke="#28A745"
+                  stroke-width="4"
+                  stroke-dasharray="45, 100"
+                  fill="none"
+                  d="M18 2.0845
+                    a 15.9155 15.9155 0 0 1 0 31.831
+                    a 15.9155 15.9155 0 0 1 0 -31.831"/>
+              </svg>
+            </div>
           </div>
         </div>
       </div>
 
       <!-- Card 2 -->
-      <div class="col-12 col-sm-6 col-lg-3">
-        <div class="card shadow-sm rounded d-flex flex-row justify-content-between align-items-center p-4">
-          <div class="bg-danger bg-opacity-75 rounded-circle d-flex align-items-center justify-content-center"
-            style="width: 40px; height: 40px;">
-            <i class="bi bi-bar-chart fs-6 text-white"></i>
-          </div>
-          <div class="">
-            <h6 class="text-secondary mb-1">Total Bounce Rate</h6>
-            <p class="fs-2 fw-bold text-muted mb-0">56%</p>
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card border-0 shadow-sm p-4">
+          <div class="d-flex justify-content-between align-items-center">
+            <div>
+              <p class="mb-1 text-muted">Total Instructors</p>
+              <h4 class="fw-bold mb-0">534</h4>
+              <small class="d-block mt-2">
+                <span class="text-danger fw-semibold">
+                  <i class="bi bi-arrow-down-right"></i> 0.6%
+                </span>
+                <span class="text-muted">than last week</span>
+              </small>
+            </div>
+            <!-- Simulated circular progress -->
+            <div style="width: 40px; height: 40px; position: relative;">
+              <svg viewBox="0 0 36 36" class="circular-chart" style="width:100%; height:100%;">
+                <path class="circle-bg"
+                  stroke="#eee"
+                  stroke-width="4"
+                  fill="none"
+                  d="M18 2.0845
+                    a 15.9155 15.9155 0 0 1 0 31.831
+                    a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                <path class="circle"
+                  stroke="#007BFF"
+                  stroke-width="4"
+                  stroke-dasharray="32, 100"
+                  fill="none"
+                  d="M18 2.0845
+                    a 15.9155 15.9155 0 0 1 0 31.831
+                    a 15.9155 15.9155 0 0 1 0 -31.831"/>
+              </svg>
+            </div>
           </div>
         </div>
       </div>
 
       <!-- Card 3 -->
-      <div class="col-12 col-sm-6 col-lg-3 mb-4">
-        <div class="card shadow-sm rounded d-flex flex-row justify-content-between align-items-center p-4">
-          <div class="bg-success bg-opacity-75 rounded-circle d-flex align-items-center justify-content-center"
-            style="width: 40px; height: 40px;">
-            <i class="bi bi-currency-dollar fs-6 text-white"></i>
-          </div>
-          <div class="">
-            <h6 class="text-secondary mb-1">Total Revenues</h6>
-            <p class="fs-2 fw-bold text-muted mb-0">$14,675</p>
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card border-0 shadow-sm p-4">
+          <div class="d-flex justify-content-between align-items-center">
+            <div>
+              <p class="mb-1 text-muted">Total Courses</p>
+              <h4 class="fw-bold mb-0">442</h4>
+              <small class="d-block mt-2">
+                <span class="text-danger fw-semibold">
+                  <i class="bi bi-arrow-down-right"></i> 1.6%
+                </span>
+                <span class="text-muted">than last week</span>
+              </small>
+            </div>
+            <!-- Simulated circular progress -->
+            <div style="width: 40px; height: 40px; position: relative;">
+              <svg viewBox="0 0 36 36" class="circular-chart" style="width:100%; height:100%;">
+                <path class="circle-bg"
+                  stroke="#eee"
+                  stroke-width="4"
+                  fill="none"
+                  d="M18 2.0845
+                    a 15.9155 15.9155 0 0 1 0 31.831
+                    a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                <path class="circle"
+                  stroke="#f25f5c"
+                  stroke-width="4"
+                  stroke-dasharray="25, 100"
+                  fill="none"
+                  d="M18 2.0845
+                    a 15.9155 15.9155 0 0 1 0 31.831
+                    a 15.9155 15.9155 0 0 1 0 -31.831"/>
+              </svg>
+            </div>
           </div>
         </div>
       </div>
-
+      
       <!-- Card 4 -->
-      <div class="col-12 col-sm-6 col-lg-3 mb-4">
-        <div class="card shadow-sm rounded d-flex flex-row justify-content-between align-items-center p-4">
-          <div class="bg-warning bg-opacity-75 rounded-circle d-flex align-items-center justify-content-center"
-            style="width: 40px; height: 40px;">
-            <i class="bi bi-eye fs-6 text-white"></i>
-          </div>
-          <div class="">
-            <h6 class="text-secondary mb-1">Total Pageviews</h6>
-            <p class="fs-2 fw-bold text-muted mb-0">3,768</p>
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card border-0 shadow-sm p-4">
+          <div class="d-flex justify-content-between align-items-center">
+            <div>
+              <p class="mb-1 text-muted">Total Assignments</p>
+              <h4 class="fw-bold mb-0">79</h4>
+              <small class="d-block mt-2">
+                <span class="text-success fw-semibold">
+                  <i class="bi bi-arrow-up-right"></i> 0.6%
+                </span>
+                <span class="text-muted">than last week</span>
+              </small>
+            </div>
+            <!-- Simulated circular progress -->
+            <div style="width: 40px; height: 40px; position: relative;">
+              <svg viewBox="0 0 36 36" class="circular-chart" style="width:100%; height:100%;">
+                <path class="circle-bg"
+                  stroke="#eee"
+                  stroke-width="4"
+                  fill="none"
+                  d="M18 2.0845
+                    a 15.9155 15.9155 0 0 1 0 31.831
+                    a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                <path class="circle"
+                  stroke="#17A2B8"
+                  stroke-width="4"
+                  stroke-dasharray="18, 100"
+                  fill="none"
+                  d="M18 2.0845
+                    a 15.9155 15.9155 0 0 1 0 31.831
+                    a 15.9155 15.9155 0 0 1 0 -31.831"/>
+              </svg>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
     <!-- Charts -->
-    <div class="row g-3">
-      <!-- Website Audience Overview -->
+    <div class="row g-3 mt-1">
+      <!-- Learners With Time Sent Monthlywise -->
       <div class="col-12 col-md-6 col-xl-7 col-xxl-9">
         <div class="card h-100">
           <div class="card-body">
-            <h5 class="text-muted">Website Audience Overview</h5>
-            <div id="website-audience-overview"></div>
+            <h5 class="text-muted">Learners With Time Sent Monthlywise</h5>
+            <div id="learners-with-time-sent-monthlywise"></div>
           </div>
         </div>
       </div>
 
-      <!-- Sessions By Channel -->
+      <!-- Course Progress -->
       <div class="col-12 col-md-6 col-xl-5 col-xxl-3 ">
-        <div class="card shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title mb-3">Sessions By Channel</h5>
-
-            <!-- Item: Organic Search -->
-            <div class="d-flex justify-content-between small pt-3 pb-2">
-              <span>Organic Search</span>
-              <span class="text-muted fw-semibold">12,897 <span class="text-primary">(80%)</span></span>
-            </div>
-            <div class="progress mb-3" style="height: 6px;">
-              <div class="progress-bar bg-primary" style="width: 80%"></div>
-            </div>
-
-            <!-- Item: Email -->
-            <div class="d-flex justify-content-between small pt-2 pb-2">
-              <span>Email</span>
-              <span class="text-muted fw-semibold">6,321 <span class="text-info">(60%)</span></span>
-            </div>
-            <div class="progress mb-3" style="height: 6px;">
-              <div class="progress-bar bg-info" style="width: 60%"></div>
-            </div>
-
-            <!-- Item: Referral -->
-            <div class="d-flex justify-content-between small pt-2 pb-2">
-              <span>Referral</span>
-              <span class="text-muted fw-semibold">9,760 <span class="text-primary">(70%)</span></span>
-            </div>
-            <div class="progress mb-3" style="height: 6px;">
-              <div class="progress-bar bg-primary" style="width: 70%"></div>
-            </div>
-
-            <!-- Item: Social -->
-            <div class="d-flex justify-content-between small pt-2 pb-2">
-              <span>Social</span>
-              <span class="text-muted fw-semibold">1,768 <span class="text-danger">(50%)</span></span>
-            </div>
-            <div class="progress mb-3" style="height: 6px;">
-              <div class="progress-bar bg-danger" style="width: 50%"></div>
-            </div>
-
-            <!-- Item: Other -->
-            <div class="d-flex justify-content-between small pt-2 pb-2">
-              <span>Other</span>
-              <span class="text-muted fw-semibold">6,187 <span class="text-warning">(40%)</span></span>
-            </div>
-            <div class="progress" style="height: 6px;">
-              <div class="progress-bar bg-warning" style="width: 40%"></div>
-            </div>
-
-            <!-- Item: Offline -->
-            <div class="d-flex justify-content-between small pt-3 pb-2 ">
-              <span>Offline</span>
-              <span class="text-muted fw-semibold">5,760 <span class="text-primary">(70%)</span></span>
-            </div>
-            <div class="progress mb-3" style="height: 6px;">
-              <div class="progress-bar bg-primary" style="width: 70%"></div>
-            </div>
+        <div class="card h-100">
+          <div class="card-body ">
+            <h5 class="text-muted"> Course Progress</h5>
+            <div id="course-progress" style="max-width: 100%; width: 100%;"></div>
           </div>
         </div>
       </div>
@@ -577,86 +620,233 @@
       <!-- Traffic Source -->
       <div class="col-lg-4 col-md-6 mb-4">
         <div class="card h-100">
-          <div class="card-body ">
-            <h5 class="text-muted">Traffic Source</h5>
-            <div id="traffic-source" style="max-width: 100%; width: 100%;"></div>
+          <div class="card-header">
+            <h5 class="mb-0">Popular Courses</h5>
           </div>
+          <ul class="list-unstyled mb-0">
+            <!-- AngularJs -->
+            <li class="px-3 py-2 border-bottom">
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <h6 class="mb-0">AngularJs</h6>
+                  <span class="text-success">$34</span>
+                </div>
+                <div class="text-end">
+                  <div class="d-flex small text-muted mb-1">
+                    <span class="me-2">9 Months</span>
+                    <span>2 Hours</span>
+                  </div>
+                  <div class="star-rating">
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-half text-warning"></i>
+                  </div>
+                </div>
+              </div>
+            </li>
+      
+            <!-- Wordpress -->
+            <li class="px-3 py-2 border-bottom">
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <h6 class="mb-0">Wordpress</h6>
+                  <span class="text-success">$16</span>
+                </div>
+                <div class="text-end">
+                  <div class="d-flex small text-muted mb-1">
+                    <span class="me-2">3 Months</span>
+                    <span>1 Hours</span>
+                  </div>
+                  <div class="star-rating">
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star text-secondary"></i>
+                    <i class="bi bi-star text-secondary"></i>
+                  </div>
+                </div>
+              </div>
+            </li>
+      
+            <!-- React -->
+            <li class="px-3 py-2 border-bottom">
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <h6 class="mb-0">React</h6>
+                  <span class="text-success">$25</span>
+                </div>
+                <div class="text-end">
+                  <div class="d-flex small text-muted mb-1">
+                    <span class="me-2">4 Months</span>
+                    <span>4 Hours</span>
+                  </div>
+                  <div class="star-rating">
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star text-secondary"></i>
+                    <i class="bi bi-star text-secondary"></i>
+                  </div>
+                </div>
+              </div>
+            </li>
+      
+            <!-- Vuejs -->
+            <li class="px-3 py-2 border-bottom">
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <h6 class="mb-0">Vuejs</h6>
+                  <span class="text-success">$18</span>
+                </div>
+                <div class="text-end">
+                  <div class="d-flex small text-muted mb-1">
+                    <span class="me-2">5 Months</span>
+                    <span>2 Hours</span>
+                  </div>
+                  <div class="star-rating">
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star text-secondary"></i>
+                    <i class="bi bi-star text-secondary"></i>
+                  </div>
+                </div>
+              </div>
+            </li>
+      
+            <!-- Laravel -->
+            <li class="px-3 py-2 border-bottom">
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <h6 class="mb-0">Laravel</h6>
+                  <span class="text-success">$22</span>
+                </div>
+                <div class="text-end">
+                  <div class="d-flex small text-muted mb-1">
+                    <span class="me-2">3 Months</span>
+                    <span>3 Hours</span>
+                  </div>
+                  <div class="star-rating">
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star text-secondary"></i>
+                    <i class="bi bi-star text-secondary"></i>
+                  </div>
+                </div>
+              </div>
+            </li>
+      
+            <!-- Nodejs -->
+            <li class="px-3 py-2">
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <h6 class="mb-0">Nodejs</h6>
+                  <span class="text-success">$28</span>
+                </div>
+                <div class="text-end">
+                  <div class="d-flex small text-muted mb-1">
+                    <span class="me-2">2 Months</span>
+                    <span>1 Hours</span>
+                  </div>
+                  <div class="star-rating">
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star text-secondary"></i>
+                    <i class="bi bi-star text-secondary"></i>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
 
       <!-- Card: Sessions By Devices -->
       <div class="col-lg-4 col-md-6 mb-4">
-        <div class="card shadow-sm mb-4">
+        <div class="card shadow-sm">
           <div class="card-body">
-            <h6 class="card-title mb-3">Sessions By Devices</h6>
-
-            <!-- Total Profit -->
-            <div class="d-flex align-items-center my-3 pt-3">
-              <div class="bg-light rounded-2 p-2 me-3 d-flex align-items-center justify-content-center"
-                style="width: 40px; height: 40px;">
-                <i class="bi bi-pc-display fs-5 text-danger"></i>
-              </div>
-              <div class="w-100">
-                <div class="d-flex justify-content-between small fw-semibold pt-3 pb-2">
-                  <span>Total Profit</span>
-                  <span class="text-muted">51,234 <span class="text-danger">80%</span></span>
-                </div>
-                <div class="progress" style="height: 6px;">
-                  <div class="progress-bar bg-danger" style="width: 80%"></div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Total Income -->
+            <h6 class="card-title mb-4">Students Overview</h6>
+      
+            <!-- Good -->
             <div class="d-flex align-items-center mb-3">
-              <div class="bg-light rounded-2 p-2 me-3 d-flex align-items-center justify-content-center"
-                style="width: 40px; height: 40px;">
-                <i class="bi bi-tablet fs-5 text-primary"></i>
+              <div class="flex-grow-1">
+                <span>Good</span>
               </div>
-              <div class="w-100">
-                <div class="d-flex justify-content-between small fw-semibold pt-3 pb-2">
-                  <span>Total Income</span>
-                  <span class="text-muted">31,634 <span class="text-primary">90%</span></span>
-                </div>
-                <div class="progress" style="height: 6px;">
-                  <div class="progress-bar bg-primary" style="width: 90%"></div>
-                </div>
+              <div>
+                <strong class="text-dark">80%</strong>
               </div>
             </div>
-
-            <!-- Total Expenses -->
-            <div class="d-flex align-items-center pb-2">
-              <div class="bg-light rounded-2 p-2 me-3 d-flex align-items-center justify-content-center"
-                style="width: 40px; height: 40px;">
-                <i class="bi bi-phone fs-5 text-warning"></i>
+            <div class="progress mb-3" style="height: 6px;">
+              <div class="progress-bar bg-success" style="width: 80%"></div>
+            </div>
+      
+            <!-- Satisfied -->
+            <div class="d-flex align-items-center mb-3">
+              <div class="flex-grow-1">
+                <span>Satisfied</span>
               </div>
-              <div class="w-100">
-                <div class="d-flex justify-content-between small fw-semibold pt-3 pb-2">
-                  <span>Total Expenses</span>
-                  <span class="text-muted">43,234 <span class="text-warning">80%</span></span>
-                </div>
-                <div class="progress" style="height: 6px;">
-                  <div class="progress-bar bg-warning" style="width: 80%"></div>
-                </div>
+              <div>
+                <strong class="text-dark">75%</strong>
               </div>
             </div>
-          </div>
-        </div>
-
-        <!-- Card: Bottom Stats -->
-        <div class="row g-2 text-center shadow-sm rounded">
-          <div class="col-6 px-2 py-4 card">
-            <h4 class="fw-bold mb-0">546</h4>
-            <small class="text-muted">New Sessions</small>
-            <div class="small text-success mt-1">
-              <i class="bi bi-arrow-up"></i> vs Last month &nbsp; <span class="fw-semibold">15%</span>
+            <div class="progress mb-3" style="height: 6px;">
+              <div class="progress-bar bg-info" style="width: 75%"></div>
             </div>
-          </div>
-          <div class="col-6 px-2 py-4 card">
-            <h4 class="fw-bold mb-0">35m:2s</h4>
-            <small class="text-muted">Time on Site</small>
-            <div class="small text-danger mt-1">
-              <i class="bi bi-arrow-down"></i> vs Last month &nbsp; <span class="fw-semibold">12%</span>
+      
+            <!-- Excellent -->
+            <div class="d-flex align-items-center mb-3">
+              <div class="flex-grow-1">
+                <span>Excellent</span>
+              </div>
+              <div>
+                <strong class="text-dark">72%</strong>
+              </div>
+            </div>
+            <div class="progress mb-3" style="height: 6px;">
+              <div class="progress-bar bg-primary" style="width: 72%"></div>
+            </div>
+      
+            <!-- Average -->
+            <div class="d-flex align-items-center mb-3">
+              <div class="flex-grow-1">
+                <span>Average</span>
+              </div>
+              <div>
+                <strong class="text-dark">65%</strong>
+              </div>
+            </div>
+            <div class="progress mb-3" style="height: 6px;">
+              <div class="progress-bar bg-warning" style="width: 65%"></div>
+            </div>
+      
+            <!-- Below Average -->
+            <div class="d-flex align-items-center mb-3">
+              <div class="flex-grow-1">
+                <span>Below Average</span>
+              </div>
+              <div>
+                <strong class="text-dark">50%</strong>
+              </div>
+            </div>
+            <div class="progress mb-3" style="height: 6px;">
+              <div class="progress-bar bg-orange" style="width: 50%"></div>
+            </div>
+      
+            <!-- Unsatisfied -->
+            <div class="d-flex align-items-center mb-2">
+              <div class="flex-grow-1">
+                <span>Unsatisfied</span>
+              </div>
+              <div>
+                <strong class="text-dark">40%</strong>
+              </div>
+            </div>
+            <div class="progress" style="height: 6px;">
+              <div class="progress-bar bg-danger" style="width: 40%"></div>
             </div>
           </div>
         </div>
@@ -664,10 +854,64 @@
 
       <!-- Session By Countries -->
       <div class="col-lg-4 col-md-12 mb-4">
-        <div class="card h-100">
-          <div class="card-body ">
-            <h5 class="text-muted">Session By Countries</h5>
-            <div id="session-by-countries" style="max-width: 100%; width: 100%;"></div>
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="fw-bold mb-4">Top 5 Instructors</h5>
+            <ul class="list-unstyled">
+              <!-- Lillian Blake -->
+              <li class="d-flex justify-content-between align-items-center mb-3 pb-2 border-bottom">
+                <div>
+                  <h6 class="mb-0 fw-semibold">Lillian Blake</h6>
+                  <small class="text-muted">Web Designer</small>
+                </div>
+                <span class="badge bg-light text-dark">Daily 2 hours</span>
+              </li>
+        
+              <!-- Tim Gray -->
+              <li class="d-flex justify-content-between align-items-center mb-3 pb-2 border-bottom">
+                <div>
+                  <h6 class="mb-0 fw-semibold">Tim Gray</h6>
+                  <small class="text-muted">Data Science</small>
+                </div>
+                <span class="badge bg-light text-dark">Daily 1 hours</span>
+              </li>
+        
+              <!-- Carley Murrer -->
+              <li class="d-flex justify-content-between align-items-center mb-3 pb-2 border-bottom">
+                <div>
+                  <h6 class="mb-0 fw-semibold">Carley Murrer</h6>
+                  <small class="text-muted">Data Science</small>
+                </div>
+                <span class="badge bg-light text-dark">Daily 2 hours</span>
+              </li>
+        
+              <!-- Rose Nash -->
+              <li class="d-flex justify-content-between align-items-center mb-3 pb-2 border-bottom">
+                <div>
+                  <h6 class="mb-0 fw-semibold">Rose Nash</h6>
+                  <small class="text-muted">Law</small>
+                </div>
+                <span class="badge bg-light text-dark">Daily 3 hours</span>
+              </li>
+        
+              <!-- Justin Parr -->
+              <li class="d-flex justify-content-between align-items-center mb-3 pb-2 border-bottom">
+                <div>
+                  <h6 class="mb-0 fw-semibold">Justin Parr</h6>
+                  <small class="text-muted">Photography</small>
+                </div>
+                <span class="badge bg-light text-dark">Daily 2 hours</span>
+              </li>
+        
+              <!-- Justin Parr (Digital Marketing) -->
+              <li class="d-flex justify-content-between align-items-center">
+                <div>
+                  <h6 class="mb-0 fw-semibold">Justin Parr</h6>
+                  <small class="text-muted">Digital Marketing</small>
+                </div>
+                <span class="badge bg-light text-dark">Daily 3 hours</span>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -675,196 +919,95 @@
 
     <div class="row g-3 mb-4">
       <!-- Google Analytics table -->
-      <div class="col-lg-8">
+      <div class="col">
         <div class="card">
-          <div class="card-body ">
-            <h5 class="table-title text-muted">Google Analytics Traffic Channels & Goals</h5>
-            <table class="table table-hover table-bordered table-style text-muted">
-              <thead>
-                <tr>
-                  <th>CHANNEL & GOALS</th>
-                  <th>SESSIONS</th>
-                  <th>BOUNCE RATE</th>
-                  <th>TRAFFIC</th>
-                  <th>CHANGE</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Organic Search</td>
-                  <td>123,879</td>
-                  <td>45.9%</td>
-                  <td>7.5%</td>
-                  <td class="text-success"><i class="bi bi-arrow-up"></i> 56%</td>
-                </tr>
-                <tr>
-                  <td>Direct</td>
-                  <td>45,789</td>
-                  <td>32.1%</td>
-                  <td>3.5%</td>
-                  <td class="text-success"><i class="bi bi-arrow-up"></i> 12%</td>
-                </tr>
-                <tr>
-                  <td>Email</td>
-                  <td>67,892</td>
-                  <td>26.3%</td>
-                  <td>8.1%</td>
-                  <td class="text-danger"><i class="bi bi-arrow-down"></i> 33%</td>
-                </tr>
-                <tr>
-                  <td>Paid Search</td>
-                  <td>628,567</td>
-                  <td>9.3%</td>
-                  <td>6.0%</td>
-                  <td class="text-success"><i class="bi bi-arrow-up"></i> 45%</td>
-                </tr>
-                <tr>
-                  <td>Referral</td>
-                  <td>123,879</td>
-                  <td>78.6%</td>
-                  <td>6.8%</td>
-                  <td class="text-danger"><i class="bi bi-arrow-down"></i> 76%</td>
-                </tr>
-                <tr>
-                  <td>Call In</td>
-                  <td>89,298</td>
-                  <td>49.2%</td>
-                  <td>1.5%</td>
-                  <td class="text-success"><i class="bi bi-arrow-up"></i> 29%</td>
-                </tr>
-                <tr>
-                  <td>Contact Us</td>
-                  <td>397,268</td>
-                  <td>85.4%</td>
-                  <td>8.3%</td>
-                  <td class="text-danger"><i class="bi bi-arrow-down"></i> 12%</td>
-                </tr>
-                <tr>
-                  <td>Proposal</td>
-                  <td>924,179</td>
-                  <td>48.2%</td>
-                  <td>4.2%</td>
-                  <td class="text-success"><i class="bi bi-arrow-up"></i> 56%</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-
-      <!-- Browser Usages -->
-      <div class="col-lg-4">
-        <div class="card shadow-sm">
-          <div class="card-body">
-            <h5 class="fw-bold mb-4 text-muted">Browser Usages</h5>
-            <ul class="list-unstyled">
-              <!-- Chrome -->
-              <li class="d-flex align-items-center mb-3">
-                <div
-                  class="bg-primary bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center me-3"
-                  style="width: 40px; height: 40px;">
-                  <i class="bi bi-browser-chrome text-primary"></i>
-                </div>
-                <div class="flex-grow-1">
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div>
-                      <h6 class="mb-0 fw-semibold">Chrome</h6>
-                      <small class="text-muted">Mozilla Foundation, Inc.</small>
-                    </div>
-                    <span class="fw-bold">35,502</span>
-                  </div>
-                </div>
-              </li>
-
-              <!-- Opera -->
-              <li class="d-flex align-items-center mb-3">
-                <div
-                  class="bg-danger bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center me-3"
-                  style="width: 40px; height: 40px;">
-                  <i class="bi bi-browser-edge text-danger"></i>
-                </div>
-                <div class="flex-grow-1">
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div>
-                      <h6 class="mb-0 fw-semibold">Opera</h6>
-                      <small class="text-muted">Mozilla Foundation, Inc.</small>
-                    </div>
-                    <span class="fw-bold">12,563</span>
-                  </div>
-                </div>
-              </li>
-
-              <!-- Edge -->
-              <li class="d-flex align-items-center mb-3">
-                <div class="bg-info bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center me-3"
-                  style="width: 40px; height: 40px;">
-                  <i class="bi bi-browser-edge text-info"></i>
-                </div>
-                <div class="flex-grow-1">
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div>
-                      <h6 class="mb-0 fw-semibold">Edge</h6>
-                      <small class="text-muted">Mozilla Foundation, Inc.</small>
-                    </div>
-                    <span class="fw-bold">25,364</span>
-                  </div>
-                </div>
-              </li>
-
-              <!-- Firefox -->
-              <li class="d-flex align-items-center mb-3">
-                <div
-                  class="bg-warning bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center me-3"
-                  style="width: 40px; height: 40px;">
-                  <i class="bi bi-browser-firefox text-warning"></i>
-                </div>
-                <div class="flex-grow-1">
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div>
-                      <h6 class="mb-0 fw-semibold">Firefox</h6>
-                      <small class="text-muted">Mozilla Foundation, Inc.</small>
-                    </div>
-                    <span class="fw-bold">14,635</span>
-                  </div>
-                </div>
-              </li>
-
-              <!-- Uebrowser -->
-              <li class="d-flex align-items-center mb-3">
-                <div
-                  class="bg-success bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center me-3"
-                  style="width: 40px; height: 40px;">
-                  <i class="bi bi-globe text-success"></i>
-                </div>
-                <div class="flex-grow-1">
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div>
-                      <h6 class="mb-0 fw-semibold">Ucbrowser</h6>
-                      <small class="text-muted">Mozilla Foundation, Inc.</small>
-                    </div>
-                    <span class="fw-bold">15,453</span>
-                  </div>
-                </div>
-              </li>
-
-              <!-- Safari -->
-              <li class="d-flex align-items-center">
-                <div
-                  class="bg-secondary bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center me-3"
-                  style="width: 40px; height: 40px;">
-                  <i class="bi bi-browser-safari text-secondary"></i>
-                </div>
-                <div class="flex-grow-1">
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div>
-                      <h6 class="mb-0 fw-semibold">Safari</h6>
-                      <small class="text-muted">Mozilla Foundation, Inc.</small>
-                    </div>
-                    <span class="fw-bold">35,657</span>
-                  </div>
-                </div>
-              </li>
-            </ul>
+          <div class="card-body p-0">
+            <h5 class="card-title p-3 mb-0">Courses Overview</h5>
+            <div class="table-responsive">
+              <table class="table table-hover mb-0">
+                <thead class="table-light">
+                  <tr>
+                    <th class="ps-3">COURSE NAME</th>
+                    <th>FACULTY NAME</th>
+                    <th>DURATION</th>
+                    <th>AMOUNT</th>
+                    <th>COURSE TYPE</th>
+                    <th class="pe-3">STATUS</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- HTML Classes -->
+                  <tr>
+                    <td class="ps-3">HTML Classes</td>
+                    <td>Venessa</td>
+                    <td>3 Months</td>
+                    <td>$89</td>
+                    <td>Online</td>
+                    <td class="pe-3"><span class="badge bg-success bg-opacity-10 text-success">Active</span></td>
+                  </tr>
+                  
+                  <!-- 3D Animation Training -->
+                  <tr>
+                    <td class="ps-3">3D Animation Training</td>
+                    <td>Rutherford</td>
+                    <td>6 Months</td>
+                    <td>$14,276</td>
+                    <td>Online</td>
+                    <td class="pe-3"><span class="badge bg-secondary bg-opacity-10 text-secondary">Closed</span></td>
+                  </tr>
+                  
+                  <!-- Digital Marketing -->
+                  <tr>
+                    <td class="ps-3">Digital Marketing</td>
+                    <td>Elizabeth</td>
+                    <td>4 Months</td>
+                    <td>$25,000</td>
+                    <td>Offline</td>
+                    <td class="pe-3"><span class="badge bg-success bg-opacity-10 text-success">Active</span></td>
+                  </tr>
+                  
+                  <!-- Guitar classes -->
+                  <tr>
+                    <td class="ps-3">Guitar classes</td>
+                    <td>Anthony</td>
+                    <td>3 Months</td>
+                    <td>$50.00</td>
+                    <td>Online</td>
+                    <td class="pe-3"><span class="badge bg-danger bg-opacity-10 text-danger">Expired</span></td>
+                  </tr>
+                  
+                  <!-- Beautician Classes -->
+                  <tr>
+                    <td class="ps-3">Beautician Classes</td>
+                    <td>Lambert</td>
+                    <td>2 Months</td>
+                    <td>$99.99</td>
+                    <td>Offline</td>
+                    <td class="pe-3"><span class="badge bg-secondary bg-opacity-10 text-secondary">Closed</span></td>
+                  </tr>
+                  
+                  <!-- Photoshop Designing -->
+                  <tr>
+                    <td class="ps-3">Photoshop Designing</td>
+                    <td>Lilly</td>
+                    <td>6 Months</td>
+                    <td>$145</td>
+                    <td>Offline</td>
+                    <td class="pe-3"><span class="badge bg-success bg-opacity-10 text-success">Active</span></td>
+                  </tr>
+                  
+                  <!-- 3D Animation Training -->
+                  <tr>
+                    <td class="ps-3">3D Animation Training</td>
+                    <td>Marry cott</td>
+                    <td>8 Months</td>
+                    <td>$378</td>
+                    <td>Online</td>
+                    <td class="pe-3"><span class="badge bg-success bg-opacity-10 text-success">Active</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>
