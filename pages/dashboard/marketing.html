@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="" id="htmlPage">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Commerce Admin Panel</title>
+  <!-- Bootstrap css -->
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap/css/bootstrap.min.css">
+  <!-- bootstrap icon -->
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap/icon/bootstrap-icons.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+
+<body class="position-relative">
+  <!-- Header start -->
+  <header class="d-flex justify-content-between align-items-center fixed-top z-index-10 container-fluide">
+    <!-- left side -->
+    <div class="d-flex align-items-center position-relative">
+      <!-- logo -->
+      <div class="logo">
+        <a href="../../index.html" class="d-flex justify-content-center">
+          <img src="../../assets/images/logo/sm-light.png" alt="Mobile Logo" class="sm-logo 
+           d-none px-2 ms-3" style="width: 45px;">
+          <img src="../../assets/images/logo/lg-light.png" alt="Desktop Logo" class="lg-logo 
+           px-5">
+        </a>
+      </div>
+      <!-- sidebar toggle button -->
+      <button class="toggle-sidebar btn cursor-pointer">
+        <i class="bi bi-list fs-3"></i>
+      </button>
+
+      <!-- Search Section - Desktop Only -->
+      <div class="p-3 d-none d-lg-block">
+        <div class="input-group border border-1 border-muted rounded input-field">
+          <input type="text" class="form-control border-0 shadow-none py-2 input-field"
+            placeholder="Search for results..." aria-label="Search">
+          <span class="input-group-text border-0 bg-transparent py-2">
+            <i class="bi bi-search text-muted "></i>
+          </span>
+        </div>
+      </div>
+    </div>
+    <!-- right side -->
+    <div>
+      <ul class=" d-flex align-items-center gap-4">
+        <!-- small screen search icon -->
+        <li class="dropdown d-lg-none list-unstyled">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false"
+            aria-expanded="false">
+            <i class="bi bi-search"></i>
+          </a>
+        </li>
+        <!-- language dropdown -->
+        <li class="dropdown list-unstyled">
+          <a class="nav-link dropdown-toggle arrow-none" data-bs-toggle="dropdown" href="#" role="button"
+            aria-haspopup="false" aria-expanded="false">
+            <img src="../../assets/images/flags/us.jpg" class="me-0 me-sm-1" height="12">
+          </a>
+          <div class="dropdown-menu dropdown-menu-end ">
+            <!-- germany -->
+            <a href="javascript:void(0);" class="dropdown-item">
+              <img src="../../assets/images/flags/germany.jpg" alt="user-image" class="me-1" height="12"> <span
+                class="align-middle">German</span>
+            </a>
+            <!-- italy -->
+            <a href="javascript:void(0);" class="dropdown-item">
+              <img src="../../assets/images/flags/italy.jpg" alt="user-image" class="me-1" height="12"> <span
+                class="align-middle">Italian</span>
+            </a>
+            <!-- spain -->
+            <a href="javascript:void(0);" class="dropdown-item">
+              <img src="../../assets/images/flags/spain.jpg" alt="user-image" class="me-1" height="12"> <span
+                class="align-middle">Spanish</span>
+            </a>
+            <!-- russia -->
+            <a href="javascript:void(0);" class="dropdown-item">
+              <img src="../../assets/images/flags/russia.jpg" alt="user-image" class="me-1" height="12"> <span
+                class="align-middle">Russian</span>
+            </a>
+          </div>
+        </li>
+
+        <!-- notification -->
+        <li class="dropdown list-unstyled">
+          <a class="nav-link dropdown-toggle arrow-none position-relative" data-bs-toggle="dropdown" href="#"
+            role="button" aria-haspopup="false" aria-expanded="false">
+            <i class="bi bi-bell fs-5"></i>
+            <span class="icon-badge">5</span>
+          </a>
+
+          <!-- Dropdown -->
+          <div class="dropdown-menu dropdown-menu-end p-3 drop-width">
+            <h6 class="dropdown-header d-flex justify-content-between align-items-center">
+              Notifications
+              <span class="badge bg-light text-primary">4 Unread</span>
+            </h6>
+
+            <div class="list-group">
+              <!-- Notification Item 1 -->
+              <div class="border-bottom d-flex align-items-start gap-2">
+                <div class="bg-light rounded-circle d-flex align-items-center justify-content-center">
+                  <i class="bi bi-person text-primary"></i>
+                </div>
+                <div class="flex-grow-1">
+                  <small><strong>Gladys Dare</strong> <a href="#"
+                      class="text-primary text-decoration-none">commented</a> on Ecosystems</small>
+                  <div class="text-muted small">2m ago</div>
+                </div>
+                <button type="button" class="btn-close btn-sm" aria-label="Close"></button>
+              </div>
+
+              <!-- Notification Item 2 -->
+              <div class="border-bottom d-flex align-items-start gap-2">
+                <div class="bg-light rounded-circle d-flex align-items-center justify-content-center text-success">
+                  <i class="bi bi-check-circle"></i>
+                </div>
+                <div class="flex-grow-1">
+                  <small><strong>Laurel</strong> donated <span class="text-success">$100</span> for carbon
+                    removal</small>
+                  <div class="text-muted small">15 min ago</div>
+                </div>
+                <button type="button" class="btn-close btn-sm" aria-label="Close"></button>
+              </div>
+
+              <!-- Notification Item 3 -->
+              <div class="border-bottom d-flex align-items-start gap-2">
+                <div class="bg-light rounded-circle d-flex align-items-center justify-content-center text-warning">
+                  <i class="bi bi-hand-thumbs-up"></i>
+                </div>
+                <div class="flex-grow-1">
+                  <small><strong>Sunny Grahm</strong> voted for carbon capture</small>
+                  <div class="text-muted small">2 min ago</div>
+                </div>
+                <button type="button" class="btn-close btn-sm" aria-label="Close"></button>
+              </div>
+
+              <!-- Notification Item 4 -->
+              <div class="border-bottom d-flex align-items-start gap-2">
+                <div class="bg-light rounded-circle d-flex align-items-center justify-content-center text-success">
+                  <i class="bi bi-check-circle"></i>
+                </div>
+                <div class="flex-grow-1">
+                  <small><strong>Laurel</strong> donated <span class="text-success">$100</span> for carbon
+                    removal</small>
+                  <div class="text-muted small">2 hours ago</div>
+                </div>
+                <button type="button" class="btn-close btn-sm" aria-label="Close"></button>
+              </div>
+            </div>
+            <div class="mt-3">
+              <button class="btn btn-primary w-100">View All</button>
+            </div>
+          </div>
+        </li>
+
+        <!-- message icon -->
+        <li class="dropdown list-unstyled">
+          <!-- Trigger -->
+          <a class="nav-link dropdown-toggle arrow-none position-relative" data-bs-toggle="dropdown" href="#"
+            role="button" aria-haspopup="false" aria-expanded="false">
+            <i class="bi bi-chat-left fs-6"></i>
+            <span class="icon-badge">6</span>
+          </a>
+          <!-- Dropdown -->
+          <div class="dropdown-menu dropdown-menu-end p-3 drop-width">
+            <!-- Header -->
+            <h6 class="dropdown-header">You have 4 Messages</h6>
+            <!-- Message List -->
+            <div class="list-group">
+              <!-- Message 1 -->
+              <div class="border-bottom d-flex align-items-center justify-content-between gap-3 p-2">
+                <div class="d-flex align-items-center justify-content-center gap-3">
+                  <img src="../../assets/images/avater/1.jpg" class="rounded-circle avater" alt="avatar">
+                  <div class="">
+                    <p class="mb-0 fs-6 fw-semibold">Madeleine</p>
+                    <div class="d-flex">
+                      <p class="mb-0 small">Just completed</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-muted small">2 min ago</div>
+              </div>
+
+              <!-- Message 2 -->
+              <div class="border-bottom d-flex align-items-center justify-content-between gap-3 p-2">
+                <div class="d-flex align-items-center justify-content-center gap-3">
+                  <img src="../../assets/images/avater/2.jpg" class="rounded-circle avater" alt="avatar">
+                  <div class="">
+                    <p class="mb-0 fs-6 fw-semibold">Madeleine</p>
+                    <div class="d-flex">
+                      <p class="mb-0 small">Just completed</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-muted small">2 min ago</div>
+              </div>
+
+              <!-- Message 3 -->
+              <div class="border-bottom d-flex align-items-center justify-content-between gap-3 p-2">
+                <div class="d-flex align-items-center justify-content-center gap-3">
+                  <img src="../../assets/images/avater/3.jpg" class="rounded-circle avater" alt="avatar">
+                  <div class="">
+                    <p class="mb-0 fs-6 fw-semibold">Madeleine</p>
+                    <div class="d-flex">
+                      <p class="mb-0 small">Just completed</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-muted small">2 min ago</div>
+              </div>
+
+              <!-- Message 4 -->
+              <!-- no need avater class use height weight in image -->
+              <div class="border-bottom d-flex align-items-center justify-content-between gap-3 p-2">
+                <div class="d-flex align-items-center justify-content-center gap-3">
+                  <img src="../../assets/images/avater/5.jpg" class="rounded-circle" height="30px" width="30px"
+                    alt="avatar">
+                  <div class="">
+                    <p class="mb-0 fs-6 fw-semibold">Madeleine</p>
+                    <div class="d-flex">
+                      <p class="mb-0 small">Just completed</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-muted small">2 min ago</div>
+              </div>
+            </div>
+            <!-- View All Button -->
+            <div class="mt-3">
+              <button class="btn btn-primary w-100 fs-6">View All</button>
+            </div>
+          </div>
+        </li>
+
+
+        <!-- settings icon -->
+        <li class="d-none d-sm-inline-block list-unstyled">
+          <a class="nav-link" data-bs-toggle="offcanvas" href="#">
+            <i class="bi bi-gear fs-5"></i>
+          </a>
+        </li>
+
+        <!-- light/dark mode icon -->
+        <li class="d-none d-sm-inline-block list-unstyled">
+          <div class="nav-link" id="toggle-dark-mode" data-bs-toggle="tooltip" data-bs-placement="left"
+            aria-label="Theme Mode" data-bs-original-title="Theme Mode">
+            <i class="bi bi-moon fs-5"></i>
+          </div>
+        </li>
+
+        <!-- full screen icon -->
+        <li class="d-none d-md-inline-block list-unstyled">
+          <a class="nav-link" href="#" data-toggle="fullscreen" id="fullscreenToggle">
+            <i class="bi bi-fullscreen fs-5"></i>
+          </a>
+        </li>
+
+        <li class="dropdown list-unstyled">
+          <a class="d-flex gap-2 align-items-center nav-link dropdown-toggle px-2" data-bs-toggle="dropdown" href="#"
+            role="button" aria-haspopup="true" aria-expanded="false">
+            <span class="account-user-avatar">
+              <img src="../../assets/images/avater/1.jpg" alt="user-image" width="32" class="rounded-circle">
+            </span>
+            <span class="d-lg-flex flex-column d-none">
+              <p class="my-0 fw-semibold text-muted">Dominic Keller</p>
+              <p class="my-0 small text-muted">Founder</p>
+            </span>
+          </a>
+
+          <div class="dropdown-menu dropdown-menu-end shadow-sm p-2 rounded text-muted">
+
+            <!-- Profile -->
+            <a href="#" class="dropdown-item d-flex align-items-center gap-2 py-2">
+              <i class="bi bi-person-circle me-1"></i>
+              <span>Profile</span>
+            </a>
+
+            <!-- Inbox -->
+            <a href="#" class="dropdown-item d-flex align-items-center justify-content-between py-2">
+              <div class="d-flex align-items-center gap-2">
+                <i class="bi bi-envelope me-1"></i>
+                <span>Inbox</span>
+              </div>
+              <span class="badge bg-success rounded-pill px-2">3</span>
+            </a>
+
+            <!-- Settings -->
+            <a href="#" class="dropdown-item d-flex align-items-center gap-2 py-2">
+              <i class="bi bi-sliders me-1"></i>
+              <span>Settings</span>
+            </a>
+
+            <!-- Support -->
+            <a href="#" class="dropdown-item d-flex align-items-center gap-2 py-2">
+              <i class="bi bi-headset me-1"></i>
+              <span>Support</span>
+            </a>
+
+            <!-- Logout -->
+            <a href="#" class="dropdown-item d-flex align-items-center gap-2 py-2">
+              <i class="bi bi-box-arrow-right"></i>
+              <span>Log Out</span>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <!-- header end -->
+
+  <!-- Sidebar start-->
+  <aside class="sidebar mt-lg-2 mt-md-2 mt-sm-2 h-100 position-fixed start-0 " id="sidebar">
+    <ul class="nav flex-column gap-2 justify-content-center ">
+      <!-- First Dropdown (Dashboard) -->
+      <li class="nav-item">
+        <a class="nav-link d-flex" href="#" data-bs-toggle="collapse" data-bs-target="#dashboardMenu"
+          aria-expanded="true">
+          <i class="bi bi-house me-2"></i>
+          <span>Dashboard</span>
+          <i class="bi bi-arrow-down-short arrow ms-auto"></i>
+        </a>
+        <ul class="submenu collapse show" id="dashboardMenu">
+          <li class="nav-item list-unstyled">
+            <a class="nav-link " href="../../index.html">Sales</a>
+          </li>
+          <li class="nav-item list-unstyled">
+            <a class="nav-link active" href="#">Marketing</a>
+          </li>
+          <li class="nav-item list-unstyled">
+            <a class="nav-link" href="app.html">App</a>
+          </li>
+          <li class="nav-item list-unstyled">
+            <a class="nav-link" href="analytics.html">Analytics</a>
+          </li>
+        </ul>
+      </li>
+
+      <!-- Second Dropdown (Orders) -->
+      <li class="nav-item">
+        <a class="nav-link d-flex" href="#" data-bs-toggle="collapse" data-bs-target="#ordersMenu"
+          aria-expanded="false">
+          <i class="bi bi-bag me-2"></i>
+          <span>Orders</span>
+          <i class="bi bi-arrow-down-short arrow ms-auto"></i>
+        </a>
+        <ul class="submenu collapse" id="ordersMenu">
+          <li class="nav-item list-unstyled">
+            <a class="nav-link" href="#">View Orders</a>
+          </li>
+          <li class="nav-item list-unstyled">
+            <a class="nav-link" href="#">New Order</a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link d-flex" href="#" data-bs-toggle="collapse" data-bs-target="#productsMenu"
+          aria-expanded="false">
+          <i class="bi bi-journals me-2"></i>
+          <span>Pages</span>
+          <i class="bi bi-arrow-down-short arrow ms-auto"></i>
+        </a>
+        <ul class="submenu collapse" id="productsMenu">
+          <li class="nav-item list-unstyled">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item list-unstyled">
+            <a class="nav-link" href="#">Profile</a>
+          </li>
+          <li class="nav-item list-unstyled">
+            <a class="nav-link" href="#">Email</a>
+          </li>
+          <li class="nav-item list-unstyled">
+            <a class="nav-link" href="#">Blog</a>
+          </li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link d-flex" href="#">
+          <i class="bi bi-people me-2"></i>
+          <span>Customers</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          <i class="bi bi-columns-gap me-2"></i>
+          <span>Base UI</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          <i class="bi bi-backpack3 me-2"></i>
+          <span>Icons</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          <i class="bi bi-table me-2"></i>
+          <span>Tables</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          <i class="bi bi-geo-alt me-2"></i>
+          <span>Maps</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          <i class="bi bi-bar-chart-line me-2"></i>
+          <span>Charts</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          <i class="bi bi-gear me-2"></i>
+          <span>Settings</span>
+        </a>
+      </li>
+    </ul>
+  </aside>
+  <!-- Sidebar end-->
+
+  <!-- Main Content start -->
+  <main class="main-content">
+    <h4 class="px-1 text-muted">Marketing Dashboard</h4>
+    <!-- Breadcrumb -->
+    <nav aria-label="breadcrumb px-2">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Marketing</li>
+      </ol>
+    </nav>
+
+    <!-- cards -->
+    <div class=" pt-2 px-0">
+      <div class="row g-3">
+        <!-- Card 1 -->
+        <div class="col-12 col-sm-6 col-lg-3 mb-4">
+          <div class="card shadow-sm border-0 p-3">
+            <div class="d-flex justify-content-between align-items-center">
+              <div>
+                <p class="mb-1 text-muted small">Clicks</p>
+                <h4 class="fw-bold mb-0">67,543</h4>
+              </div>
+              <div>
+                <div class="d-flex align-items-end gap-1">
+                  <div class="bg-primary rounded" style="width: 4px; height: 10px;"></div>
+                  <div class="bg-primary rounded" style="width: 4px; height: 18px;"></div>
+                  <div class="bg-primary rounded" style="width: 4px; height: 14px;"></div>
+                  <div class="bg-primary rounded" style="width: 4px; height: 22px;"></div>
+                  <div class="bg-primary rounded" style="width: 4px; height: 16px;"></div>
+                  <div class="bg-primary rounded" style="width: 4px; height: 20px;"></div>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex justify-content-between align-items-center mt-3 small">
+              <span class="text-success">
+                <i class="bi bi-arrow-up-circle me-1"></i> 4%
+                <span class="text-muted">last month</span>
+              </span>
+              <i class="bi bi-arrow-clockwise text-muted"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-12 col-sm-6 col-lg-3 mb-4">
+          <div class="card shadow-sm border-0 p-3">
+            <div class="d-flex justify-content-between align-items-center">
+              <div>
+                <p class="mb-1 text-muted small">Impressions</p>
+                <h4 class="fw-bold mb-0">83,267</h4>
+              </div>
+              <div>
+                <div class="d-flex align-items-end gap-1">
+                  <div class="bg-danger rounded" style="width: 4px; height: 10px;"></div>
+                  <div class="bg-danger rounded" style="width: 4px; height: 18px;"></div>
+                  <div class="bg-danger rounded" style="width: 4px; height: 14px;"></div>
+                  <div class="bg-danger rounded" style="width: 4px; height: 22px;"></div>
+                  <div class="bg-danger rounded" style="width: 4px; height: 16px;"></div>
+                  <div class="bg-danger rounded" style="width: 4px; height: 20px;"></div>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex justify-content-between align-items-center mt-3 small">
+              <span class="text-danger">
+                <i class="bi bi-arrow-down-circle me-1"></i> 4%
+                <span class="text-muted">last month</span>
+              </span>
+              <i class="bi bi-arrow-clockwise text-muted"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-12 col-sm-6 col-lg-3 mb-4">
+          <div class="card shadow-sm border-0 p-3">
+            <div class="d-flex justify-content-between align-items-center">
+              <div>
+                <p class="mb-1 text-muted small">Audience</p>
+                <h4 class="fw-bold mb-0">78,654</h4>
+              </div>
+              <div>
+                <div class="d-flex align-items-end gap-1">
+                  <div class="bg-info rounded" style="width: 4px; height: 10px;"></div>
+                  <div class="bg-info rounded" style="width: 4px; height: 18px;"></div>
+                  <div class="bg-info rounded" style="width: 4px; height: 14px;"></div>
+                  <div class="bg-info rounded" style="width: 4px; height: 22px;"></div>
+                  <div class="bg-info rounded" style="width: 4px; height: 16px;"></div>
+                  <div class="bg-info rounded" style="width: 4px; height: 20px;"></div>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex justify-content-between align-items-center mt-3 small">
+              <span class="text-danger">
+                <i class="bi bi-arrow-down-circle me-1"></i> 4%
+                <span class="text-muted">last month</span>
+              </span>
+              <i class="bi bi-arrow-clockwise text-muted"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="col-12 col-sm-6 col-lg-3 mb-4">
+          <div class="card shadow-sm border-0 p-3">
+            <div class="d-flex justify-content-between align-items-center">
+              <div>
+                <p class="mb-1 text-muted small">Conversions</p>
+                <h4 class="fw-bold mb-0">7.6%</h4>
+              </div>
+              <div>
+                <div class="d-flex align-items-end gap-1">
+                  <div class="bg-success rounded" style="width: 4px; height: 10px;"></div>
+                  <div class="bg-success rounded" style="width: 4px; height: 18px;"></div>
+                  <div class="bg-success rounded" style="width: 4px; height: 14px;"></div>
+                  <div class="bg-success rounded" style="width: 4px; height: 22px;"></div>
+                  <div class="bg-success rounded" style="width: 4px; height: 16px;"></div>
+                  <div class="bg-success rounded" style="width: 4px; height: 20px;"></div>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex justify-content-between align-items-center mt-3 small">
+              <span class="text-success">
+                <i class="bi bi-arrow-down-circle me-1"></i> 4%
+                <span class="text-muted">last month</span>
+              </span>
+              <i class="bi bi-arrow-clockwise text-muted"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Charts -->
+    <div class="row g-3">
+      <!-- Lead Break Down chart -->
+      <div class="col-12 col-md-5 col-xl-4 col-xxl-3 ">
+        <div class="card h-100">
+          <div class="card-body ">
+            <h5 class="text-muted">Lead Break Down</h5>
+            <div id="lead-break-down" style="max-width: 100%; width: 100%;"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bounce Rate By Week chart -->
+      <div class="col-12 col-md-7 col-xl-8 col-xxl-9">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="text-muted">Bounce Rate By Week</h5>
+            <div id="bounce-rate-by-week"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row g-3 mt-1">
+      <!-- Left: Country wise Traffic Table -->
+      <div class="col-12 col-lg-8">
+        <div class="card shadow-sm border-0">
+          <div class="card-body">
+            <h5 class="card-title mb-4">Country Wise Traffics</h5>
+            <div class="table-responsive">
+              <table class="table align-middle">
+                <thead class="table text-muted">
+                  <tr>
+                    <th>Country</th>
+                    <th>Sessions</th>
+                    <th>Bounce Rate</th>
+                    <th>Time on Site (Avg)</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody class="text-muted">
+                  <tr>
+                    <td><img src="https://flagcdn.com/us.svg" width="20" class="me-2"> United State</td>
+                    <td>13,786</td>
+                    <td>56.8%</td>
+                    <td>2m:56s</td>
+                    <td><span class="d-inline-block bg-primary rounded-pill" style="width:60px; height:6px;"></span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><img src="https://flagcdn.com/in.svg" width="20" class="me-2"> India</td>
+                    <td>16,876</td>
+                    <td>34.5%</td>
+                    <td>1m:43s</td>
+                    <td><span class="d-inline-block bg-danger rounded-pill" style="width:60px; height:6px;"></span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><img src="https://flagcdn.com/it.svg" width="20" class="me-2"> Italy</td>
+                    <td>35,721</td>
+                    <td>46.3%</td>
+                    <td>3m:31s</td>
+                    <td><span class="d-inline-block bg-info rounded-pill" style="width:60px; height:6px;"></span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><img src="https://flagcdn.com/ru.svg" width="20" class="me-2"> Russia</td>
+                    <td>45,863</td>
+                    <td>93.76%</td>
+                    <td>8m:16s</td>
+                    <td><span class="d-inline-block bg-success rounded-pill" style="width:60px; height:6px;"></span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><img src="https://flagcdn.com/ca.svg" width="20" class="me-2"> Canada</td>
+                    <td>37,917</td>
+                    <td>46.76%</td>
+                    <td>5m:76s</td>
+                    <td><span class="d-inline-block bg-purple rounded-pill"
+                        style="width:60px; height:6px; background-color: #6f42c1;"></span></td>
+                  </tr>
+                  <tr>
+                    <td><img src="https://flagcdn.com/de.svg" width="20" class="me-2"> Germany</td>
+                    <td>67,967</td>
+                    <td>34.87%</td>
+                    <td>5m:34s</td>
+                    <td><span class="d-inline-block bg-warning rounded-pill" style="width:60px; height:6px;"></span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- column 2 -->
+      <div class="col-12 col-lg-4">
+        <div class="card shadow-sm border-0 h-100">
+          <div class="card-body">
+            <h5 class="card-title mb-4">Traffic By Site</h5>
+
+            <!-- Donut Placeholder -->
+            <div class="d-flex justify-content-center align-items-center mb-4">
+              <div class="position-relative" style="width: 120px; height: 120px;">
+                <svg viewBox="0 0 36 36" class="w-100 h-100">
+                  <circle cx="18" cy="18" r="16" fill="none" stroke="#f44336" stroke-width="4"
+                    stroke-dasharray="20, 80" />
+                  <circle cx="18" cy="18" r="16" fill="none" stroke="#ffc107" stroke-width="4"
+                    stroke-dasharray="30, 70" stroke-dashoffset="20" />
+                  <circle cx="18" cy="18" r="16" fill="none" stroke="#0d6efd" stroke-width="4"
+                    stroke-dasharray="35, 65" stroke-dashoffset="50" />
+                </svg>
+                <div class="position-absolute top-50 start-50 translate-middle text-center">
+                  <strong>Total</strong><br>
+                  <span class="fs-5 fw-bold">177</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Traffic List -->
+            <ul class="list-unstyled">
+              <li class="d-flex justify-content-between align-items-center mb-2">
+                <span><i class="bi bi-circle-fill text-primary me-2"></i> FaceBook</span>
+                <span>8,209 <span class="text-success small ms-1">↑55%</span></span>
+              </li>
+              <li class="d-flex justify-content-between align-items-center mb-2">
+                <span><i class="bi bi-circle-fill text-danger me-2"></i> Google</span>
+                <span>7,210 <span class="text-success small ms-1">↑48%</span></span>
+              </li>
+              <li class="d-flex justify-content-between align-items-center mb-2">
+                <span><i class="bi bi-circle-fill text-warning me-2"></i> Youtube</span>
+                <span>6,234 <span class="text-danger small ms-1">↓40%</span></span>
+              </li>
+              <li class="d-flex justify-content-between align-items-center">
+                <span><i class="bi bi-circle-fill text-info me-2"></i> Twitter</span>
+                <span>4,569 <span class="text-success small ms-1">↑30%</span></span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row g-3 mt-1 mb-4">
+      <!-- Card 1: Followers by Gender -->
+      <div class="col-12 col-md-4">
+        <div class="card shadow-sm border-0">
+          <div class="card-body">
+            <h6 class="card-title">Followers By Gender</h6>
+            <div class="d-flex align-items-center">
+              <!-- Donut Placeholder -->
+              <div class="position-relative me-3" style="width: 80px; height: 80px;">
+                <svg viewBox="0 0 36 36" class="w-100 h-100">
+                  <circle cx="18" cy="18" r="16" fill="none" stroke="#e9ecef" stroke-width="4" />
+                  <circle cx="18" cy="18" r="16" fill="none" stroke="#20c997" stroke-width="4"
+                    stroke-dasharray="65, 100" />
+                  <circle cx="18" cy="18" r="16" fill="none" stroke="#a259ff" stroke-width="4"
+                    stroke-dasharray="35, 100" stroke-dashoffset="-65" />
+                </svg>
+              </div>
+              <!-- Labels -->
+              <div>
+                <p class="mb-1">Total Followers</p>
+                <h4 class="fw-bold mb-2">69,4<br>53</h4>
+                <span class="d-block text-success small">● Males (4,678)</span>
+                <span class="d-block text-purple small" style="color:#a259ff">● Female (2,784)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2: Live Interactions -->
+      <div class="col-12 col-md-4">
+        <div class="card shadow-sm border-0">
+          <div class="card-body">
+            <h6 class="card-title">Live Interactions</h6>
+            <p class="text-muted mb-0 small">Total Followers</p>
+            <h4 class="fw-bold mb-3">69,453</h4>
+
+            <!-- Progress Bar -->
+            <div class="progress mb-3" style="height: 6px;">
+              <div class="progress-bar bg-danger" style="width: 35%"></div>
+            </div>
+
+            <!-- Metrics -->
+            <div class="d-flex justify-content-between text-muted small">
+              <div><span class="text-primary">●</span> PageViews<br><strong class="text-muted">6,432</strong></div>
+              <div><span class="text-danger">●</span> E-mail Views<br><strong class="text-muted">3,643</strong></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3: Live Campaigns -->
+      <div class="col-12 col-md-4">
+        <div class="card shadow-sm border-0">
+          <div class="card-body">
+            <h6 class="card-title">Live Campaigns</h6>
+            <div class="d-flex align-items-center mb-3">
+              <!-- Circular Progress -->
+              <div class="me-3 position-relative" style="width: 60px; height: 60px;">
+                <svg viewBox="0 0 36 36" class="w-100 h-100">
+                  <circle cx="18" cy="18" r="16" fill="none" stroke="#dee2e6" stroke-width="4" />
+                  <circle cx="18" cy="18" r="16" fill="none" stroke="#0dcaf0" stroke-width="4"
+                    stroke-dasharray="48, 100" />
+                </svg>
+                <div class="position-absolute top-50 start-50 translate-middle fs-6 fw-bold">48%</div>
+              </div>
+              <!-- Campaign Stats -->
+              <div>
+                <p class="mb-1 small">Total Completed</p>
+                <h5 class="fw-bold">85%</h5>
+              </div>
+            </div>
+            <!-- Expenditure -->
+            <div class="d-flex justify-content-between text-muted small pb-2">
+              <div>Expenditure<br><strong class="text-muted">$1,765</strong></div>
+              <div>Remaining<br><strong class="text-muted">$2,463</strong></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- End Main Content -->
+
+  <!-- Back to Top Button -->
+  <button type="button" class="btn btn-primary btn rounded shadow position-fixed bottom-0 end-0 m-4 d-none"
+    id="backToTopBtn" style="z-index: 105;">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <!-- Footer -->
+  <footer class="footer position-absolute bottom-0 w-100 justify-content-center text-muted text-center p-2">
+    &copy; 2025 E-Commerce Admin Panel. All rights reserved.
+  </footer>
+
+  <!-- Bootstrap js -->
+  <script src="../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- jQuery -->
+  <script src="../../assets/vendor/jquery/jquery.js"></script>
+  <!-- Custom JS -->
+  <script src="../../assets/js/main.js"></script>
+  <!-- ApexCharts -->
+  <script src="../../assets/vendor/apexcharts/apexcharts.js"></script>
+  <script src="../../assets/vendor/apexcharts/charts.js"></script>
+  <script>
+    // Dark/Light mode toggle functionality
+    function setTheme(theme) {
+      var htmlEl = document.getElementById('htmlPage');
+      var icon = document.querySelector('#toggle-dark-mode i');
+      if (theme === 'dark') {
+        htmlEl.setAttribute('data-bs-theme', 'dark');
+        if (icon) {
+          icon.classList.remove('bi-moon');
+          icon.classList.add('bi-sun');
+        }
+      } else {
+        htmlEl.setAttribute('data-bs-theme', 'light');
+        if (icon) {
+          icon.classList.remove('bi-sun');
+          icon.classList.add('bi-moon');
+        }
+      }
+    }
+
+    // On page load, set theme from localStorage
+    window.addEventListener('DOMContentLoaded', function () {
+      var storedTheme = localStorage.getItem('theme') || 'light';
+      setTheme(storedTheme);
+      // Add click listener for dark mode toggle
+      var toggle = document.getElementById('toggle-dark-mode');
+      if (toggle) {
+        toggle.addEventListener('click', function () {
+          var htmlEl = document.getElementById('htmlPage');
+          var currentTheme = htmlEl.getAttribute('data-bs-theme') === 'dark' ? 'dark' : 'light';
+          var newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+          setTheme(newTheme);
+          localStorage.setItem('theme', newTheme);
+        });
+      }
+    });
+    // Fullscreen toggle functionality
+    document.getElementById('fullscreenToggle').addEventListener('click', function (e) {
+      e.preventDefault();
+      if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen();
+      } else {
+        document.exitFullscreen();
+      }
+    });
+
+    function updateFullscreenIcon() {
+      var icon = document.querySelector('#fullscreenToggle i');
+      if (document.fullscreenElement) {
+        if (icon) {
+          icon.classList.remove('bi-fullscreen');
+          icon.classList.add('bi-fullscreen-exit');
+        }
+      } else {
+        if (icon) {
+          icon.classList.remove('bi-fullscreen-exit');
+          icon.classList.add('bi-fullscreen');
+        }
+      }
+    }
+
+    document.addEventListener('fullscreenchange', updateFullscreenIcon);
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && document.fullscreenElement) {
+        document.exitFullscreen();
+      }
+    });
+
+    // Set correct icon on page load
+    updateFullscreenIcon();
+  </script>
+  <script>
+    const backToTopBtn = document.getElementById("backToTopBtn");
+
+    // Show button after scrolling down 100px
+    window.onscroll = () => {
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        backToTopBtn.classList.remove("d-none");
+      } else {
+        backToTopBtn.classList.add("d-none");
+      }
+    };
+
+    // Scroll to top smoothly when clicked
+    backToTopBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,241 @@
+:root {
+  /* Light Theme */
+  --color-bg: #eeeefd;
+  --color-surface: #FFFFFF;
+  --color-text: #74829c;
+  --color-text-hover: #525ce5;
+  --color-text-hover-bg: #F6F7FE;
+
+  /* Dark Theme */
+  --color-bg-dark: #071932;
+  --color-surface-dark: #001027;
+  --color-text-dark: #B3B8BF;
+  --color-text-border-dark: #525CE5;
+  --color-text-hover-dark: #FFFFFF;
+  --color-text-hover-bg-dark: #0D1C32;
+}
+
+/* *** sales dashboard page start *** */
+body {
+  background-color: var(--color-bg);
+  min-height: 100vh;
+}
+
+/* header start */
+header {
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  height: 70px;
+}
+
+.logo {
+  max-width: 239px;
+}
+
+.toggle-sidebar {
+  color: var(--color-icon);
+}
+
+.dropdown-toggle::after {
+  display: none !important;
+}
+
+.icon-badge {
+  position: absolute;
+  top: -7px;
+  right: -7px;
+  width: 14px;
+  height: 14px;
+  background: #FB5454;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 10px
+}
+
+.icon {
+  cursor: pointer;
+}
+
+.drop-width{
+  width: 300px;
+}
+
+.avater {
+  height: 30px;
+  width: 30px;
+}
+/* header end */
+
+/* sidebar start */
+.sidebar {
+  background-color: var(--color-surface);
+  width: 250px;
+  top: 63px;
+  z-index: 99;
+  transition: width 0.3s;
+}
+
+.sidebar .nav-link {
+  color: var(--color-text);
+}
+
+.sidebar .nav-link:hover {
+  background-color: var(--color-text-hover-bg);
+  color: var(--color-text-hover);
+}
+
+.sidebar .nav-link.active {
+  background-color: var(--color-text-hover-bg);
+  color: var(--color-text-hover);
+  border-right: 2px solid var(--color-text-border-dark);
+}
+
+.sidebar .nav-link .arrow {
+  transition: transform 0.3s;
+}
+
+.sidebar .nav-link[aria-expanded="true"] .arrow {
+  transform: rotate(180deg);
+  transition: transform 0.3s;
+}
+
+.sidebar .submenu {
+  padding-left: 25px;
+}
+
+.sidebar .submenu .nav-link {
+  padding: 8px 15px;
+}
+
+.sidebar.collapsed {
+  width: 60px;
+}
+
+.sidebar.collapsed .nav-link span,
+.sidebar.collapsed .arrow {
+  display: none;
+}
+
+.sidebar.collapsed .nav-item {
+  position: relative;
+}
+
+.sidebar.collapsed .submenu {
+  display: none;
+  position: absolute;
+  left: 50px;
+  top: 0;
+  background-color: var(--color-text-hover-bg);
+  min-width: 200px;
+  border-radius: 0 5px 5px 0;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 99;
+}
+
+.sidebar.collapsed .nav-item:hover .submenu {
+  display: block;
+  background-color: var(--color-surface);
+}
+/* sidebar end */
+
+/* main content start */
+.main-content {
+  margin-left: 250px;
+  padding: 20px;
+  margin-top: 60px;
+  transition: margin-left 0.3s;
+  flex: 1;
+}
+
+.main-content.collapsed {
+  margin-left: 60px;
+}
+/* main content end */
+
+.footer {
+  background-color: var(--color-surface);
+  transition: margin-left 0.3s;
+}
+
+/* dark mode */
+[data-bs-theme=dark] body {
+  background-color: var(--color-bg-dark);
+}
+
+[data-bs-theme=dark] header,
+[data-bs-theme=dark] aside,
+[data-bs-theme=dark] .card {
+  background-color: var(--color-surface-dark);
+  color: var(--color-text-dark);
+}
+
+[data-bs-theme=dark] footer {
+  background-color: var(--color-surface-dark);
+}
+
+[data-bs-theme=dark] .input-field {
+  background-color: var(--color-bg-dark);
+}
+
+/* dark sidebar start */
+[data-bs-theme=dark] .sidebar.collapsed ul.nav > li > ul.submenu {
+  background-color: var(--color-surface-dark);
+  color: var(--color-text-hover-dark);
+}
+[data-bs-theme=dark] .nav-link:hover {
+  background-color: var(--color-text-hover-bg-dark);
+  color: var(--color-text-hover-dark);
+}
+
+[data-bs-theme=dark] .sidebar .nav-link.active {
+  background-color: var(--color-text-hover-bg-dark);
+  color: var(--color-text-hover-dark);
+  border-right: 2px solid var(--color-text-border-dark);
+}
+/* dark sidebar end */
+
+[data-bs-theme=dark] table th,
+[data-bs-theme=dark] table td {
+  background-color: var(--color-surface-dark);
+}
+
+.sidebar.show {
+  transform: translateX(0);
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+}
+
+.badge-custom {
+  border-radius: 20px;
+  padding: 5px 10px;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.product-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+}
+
+
+.product-title {
+  margin-bottom: 0;
+  font-weight: 500;
+}
+
+.product-subtitle {
+  color: #6c757d;
+  font-size: 12px;
+}
+/* *** sales dashboard page end *** */
+
+/* *** app dashboard page end *** */
+
+/* *** app dashboard page end *** */
